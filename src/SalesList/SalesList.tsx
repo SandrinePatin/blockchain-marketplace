@@ -8,6 +8,7 @@ class SalesList extends React.Component<any, {}> {
 
     addressUser: string = "";
     sales = Array<Sale>();
+    properties = Array<Property>();
 
     constructor(props: any) {
         super(props);
@@ -21,6 +22,23 @@ class SalesList extends React.Component<any, {}> {
 
                 fetchSales()
                     .then(async (result) => {
+
+                        fetchProperties()
+                            .then(async (result)=> {
+                                for(let i = 0; i < result.length; i++){
+                                    this.properties[i] = new Property(result[i].localisation, result[i].area, result[i].description, result[i].rooms,result[i].owner)
+                                }
+                                this.setState(this.properties)
+                                for(let i = 0; i < this.sales.length; i++){
+                                    this.sales[i].property = this.properties[this.sales[i].propertyId];
+                                }
+                                console.log(this.sales)
+
+                            })
+                            .catch(err => {
+                                console.error(err.message);
+                            });
+
                         for(let i = 0; i < result.length; i++){
                             this.sales[i] = new Sale(result[i].price, result[i].sellerId, result[i].saleDate, result[i].propertyId)
                         }

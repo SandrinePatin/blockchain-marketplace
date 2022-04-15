@@ -1,14 +1,18 @@
 import Property from "./Property";
 
 class Sale{
+    set sellerId(value: string) {
+        this._sellerId = value;
+    }
     price : number;
-    sellerId: string;
+    private _sellerId: string;
     saleDate: string;
     propertyId: number;
+    property: Property | undefined;
 
     constructor(price: number, sellerId: string, saleDate: string, propertyId: number) {
         this.price = price;
-        this.sellerId = sellerId;
+        this._sellerId = sellerId;
         this.saleDate = saleDate;
         this.propertyId = propertyId;
     }

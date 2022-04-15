@@ -57,7 +57,7 @@ class PropertyComponent extends React.Component<{data: any, myaddr: string}, { [
         let data = this.props.data
         let popup = null;
         if (this.state.showPopup) {
-            popup = (<PropertyDetails property={data.propertyId} myaddr={this.props.myaddr} buyMe={this.buyMe}/>);
+            popup = (<PropertyDetails property={data.property} myaddr={this.props.myaddr} buyMe={this.buyMe}/>);
         }
         connectEth()
         .then(result => {
