@@ -1,6 +1,7 @@
 import Web3 from "web3";
 import { ABI } from '../ABI/RealEstateMP';
 import Property from '../models/Property';
+import Sale from '../models/Sale';
 
 export function connectEth(): Promise<any> {
     return new Promise<any>(async (resolve, reject) => {
@@ -23,8 +24,38 @@ export function connectEth(): Promise<any> {
     });
 }
 
-export function createSale(property: Property) {
-    
+export function buy(property: Property): Promise<void> {
+    return new Promise<void>((resolve, reject) => {
+        connectEth()
+        .then(result => {
+            fetchProperties()
+            .then((properties: any[]) => {
+                properties.forEach(prop => {
+                    if (prop === property) {
+                        console.log('CURRENT PROP FOUND');
+                    }
+                });
+            });
+        })
+        .catch((err: Error) => {
+            console.error(err.message);
+        });
+    });
+}
+
+export function createSale(property: Property): Promise<void> {
+    return new Promise<any>((resolve, reject) => {
+        connectEth().then(async (result) => {
+            createProperty(property).then(() => {
+                fetchProperties().then(async (properties: any[]) => {
+                    const property = properties[properties.length - 1];
+                    const sale = new Sale(10, result.account[0], new Date().toUTCString(), property);
+                    const saleResult = await result.contract.methods.createSale(sale.price, sale.sellerId, Date.now(), properties.length - 1).send({ from: result.account[0] });
+                    resolve(saleResult);
+                });
+            });
+        });
+    });
 }
 
 export function createProperty(property: Property): Promise<void> {
