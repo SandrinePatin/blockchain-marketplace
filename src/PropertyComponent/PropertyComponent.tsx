@@ -1,10 +1,12 @@
 import React from 'react';
 import './PropertyComponent.css';
 import Property from "../models/Property";
-import PropertyDetailsPopup from "./PropertyDetailsPopup";
+import PropertyDetailsPopup from "./PropertyDetails";
 import { connectEth } from '../ABI/ContractController';
+import PropertyDetails from "./PropertyDetails";
 
-class PropertyComponent extends React.Component<{data: any}, { [key: string]: any}>{
+
+class PropertyComponent extends React.Component<{data: any, myaddr: string}, { [key: string]: any}> {
     state = {showPopup: false};
     contract: any = null;
     constructor(props: any) {
@@ -25,11 +27,19 @@ class PropertyComponent extends React.Component<{data: any}, { [key: string]: an
         }
     }
 
+    openClosePopupHandler = () => {
+        if(this.state.showPopup === true){
+            this.closePopupHandler();
+        } else {
+            this.openPopupHandler();
+        }
+    }
+
     render(){
         let data = this.props.data
         let popup = null;
-        if(this.state.showPopup) {
-            popup = (<PropertyDetailsPopup message={data.propertyId} closeMe={this.closePopupHandler} buyMe={this.buyMe}/>);
+        if (this.state.showPopup) {
+            popup = (<PropertyDetails property={data.propertyId} myaddr={this.props.myaddr} buyMe={this.buyMe}/>);
         }
         connectEth()
         .then(result => {
@@ -40,14 +50,15 @@ class PropertyComponent extends React.Component<{data: any}, { [key: string]: an
         });
 
         return (
-            <div className="card col-md-3 m-1" >
+            <div className="card col-md-2 mt-1 ms-sm-2" >
                 <div className="card-body">
                     <h5 className="card-title">{data.propertyId.address}</h5>
                     <p>Price : {data.price}</p>
                     <p>Date : {data.saleDate}</p>
-                    <div>
-                        <button className="btn btn-outline-info" onClick={this.openPopupHandler}>Voir les détails </button>
-                        {popup}
+                    {popup}
+                    <div className='btn-group'>
+                        <button className="btn btn-outline-info" onClick={this.openClosePopupHandler}>Voir les détails </button>
+                        <button className="btn btn-success" onClick={this.buyMe}>BuyMe !</button>
                     </div>
                 </div>
             </div>

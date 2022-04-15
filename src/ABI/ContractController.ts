@@ -7,7 +7,7 @@ export function connectEth(): Promise<any> {
             // await (window as any).ethereum.request({ method: 'eth_requestAccounts'});
             let web3js = new Web3((window as any).web3.currentProvider);
             const abi = ABI.abi as any;
-            const realEstateContract = new web3js.eth.Contract(abi, '0x1fcb7574949576B602D2eeEc616587e00fD8Df9B');
+            const realEstateContract = new web3js.eth.Contract(abi);
             const account = await web3js.eth.requestAccounts();
             const address = account[0];
             console.log('ACCOUNT ADDR:', address);
