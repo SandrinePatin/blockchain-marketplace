@@ -39,7 +39,7 @@ class NewProperty extends React.Component<any, any> {
                         <label htmlFor="inputRooms" className="form-label">Nombre de pièces</label>
                         <input type="number" className="form-control" id="rooms"/>
                     </div>
-                    <button type="submit" onClick={this.createProperty} className="btn btn-primary">Créer</button>
+                    <button type="submit" className="btn btn-primary">Créer</button>
                 </form>
             </div>
         );

@@ -53,3 +53,19 @@ export function fetchProperties(): Promise<any[]> {
         });
     });
 }
+
+export function fetchSales(): Promise<any[]> {
+    return new Promise<any[]>((resolve, reject) => {
+        connectEth().then(async (result) => {
+            const contract = result.contract;
+            console.log(result);
+            let sales = [];
+            const salesCount = await contract.methods.salesLength().call();
+            for (let i = 0; i < salesCount; i++) {
+                const sale = await contract.methods.sales(i).call();
+                sales.push(sale);
+            }
+            resolve(sales);
+        });
+    });
+}

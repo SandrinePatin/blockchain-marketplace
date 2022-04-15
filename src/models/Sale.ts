@@ -4,9 +4,9 @@ class Sale{
     price : number;
     sellerId: string;
     saleDate: string;
-    propertyId: Property;
+    propertyId: number;
 
-    constructor(price: number, sellerId: string, saleDate: string, propertyId: Property) {
+    constructor(price: number, sellerId: string, saleDate: string, propertyId: number) {
         this.price = price;
         this.sellerId = sellerId;
         this.saleDate = saleDate;

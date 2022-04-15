@@ -70,7 +70,7 @@ class PropertyComponent extends React.Component<{data: any, myaddr: string}, { [
         return (
             <div className="card col-md-2 mt-1 ms-sm-2" >
                 <div className="card-body">
-                    <h5 className="card-title">{data.propertyId.address}</h5>
+                    <h5 className="card-title">{data.propertyId}</h5>
                     <p>Price : {data.price}</p>
                     <p>Date : {data.saleDate}</p>
                     {popup}

@@ -2,34 +2,48 @@ import React, { useState }  from 'react';
 import Property from "../models/Property";
 import Sale from '../models/Sale';
 import PropertyComponent from "../PropertyComponent/PropertyComponent";
-import { connectEth } from '../ABI/ContractController';
+import {connectEth, fetchProperties, fetchSales} from '../ABI/ContractController';
 
 class SalesList extends React.Component<any, {}> {
 
+    addressUser: string = "";
+    sales = Array<Sale>();
+
+    constructor(props: any) {
+        super(props);
+        this.getSale();
+    }
+
+    getSale(){
+        connectEth()
+            .then(async (result) => {
+                this.addressUser = result.account[0];
+
+                fetchSales()
+                    .then(async (result) => {
+                        for(let i = 0; i < result.length; i++){
+                            this.sales[i] = new Sale(result[i].price, result[i].sellerId, result[i].saleDate, result[i].propertyId)
+                        }
+                        this.setState(this.sales)
+
+                        console.log(result);
+                    })
+                    .catch(err => {
+                        console.error(err.message);
+                    });
+            })
+            .catch(err => {
+                console.error(err.message);
+            });
+    }
+
 
     render(){
-        connectEth()
-        .then(async (result) => {
-            const res = await result.contract.methods.salesLength().call();
-            console.log(res);
-        })
-        .catch(err => {
-            console.error(err.message);
-        });
-        let sales = Array<Sale>();
-
-        let property = new Property("ici1",23,"Description",1,"randompeople");
-        sales[0] = new Sale(1200,"eeee","12/12/2032",property);
-        let property1 = new Property("ici2",43,"Description",3,this.props.myaddr);
-        sales[1] = new Sale(5000,"eeee","12/12/2032",property1);
-        let property2 = new Property("ici3",23,"Description",2,"randompeople2");
-        sales[2] = new Sale(7500,"eeee","12/12/2032",property2);
-
         return (
             <div className="container-fluid">
                 <div className="row grid gap-3">
-                {sales && sales.map(sale =>
-                    <PropertyComponent data={sale} myaddr={this.props.myaddr} />
+                {this.sales && this.sales.map(sale =>
+                    <PropertyComponent data={sale} myaddr={this.addressUser} />
                 )}
                 </div>
             </div>
