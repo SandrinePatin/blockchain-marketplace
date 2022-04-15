@@ -3,7 +3,7 @@ import Sale from "../models/Sale";
 import Property from "../models/Property";
 import PropertyComponent from "../PropertyComponent/PropertyComponent";
 
-class MySales extends React.Component<any, any>{
+class MyProperties extends React.Component<any, any>{
     render(){
         let sales = Array<Sale>();
 
@@ -13,6 +13,8 @@ class MySales extends React.Component<any, any>{
         sales[1] = new Sale(5000,"eeee","12/12/2032",property1);
         let property2 = new Property("ici3",23,"Description",2);
         sales[2] = new Sale(7500,"eeee","12/12/2032",property2);
+        let property3 = new Property("ici3",23,"Description",2);
+        sales[3] = new Sale(7500,"eeee","12/12/2032",property3);
 
         return (
             <div className="container">
@@ -26,4 +28,4 @@ class MySales extends React.Component<any, any>{
     }
 }
 
-export default MySales;
+export default MyProperties;
