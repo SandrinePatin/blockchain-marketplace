@@ -1,7 +1,5 @@
 import React from 'react';
 import './PropertyComponent.css';
-import Property from "../models/Property";
-import PropertyDetailsPopup from "./PropertyDetails";
 import { connectEth } from '../ABI/ContractController';
 import PropertyDetails from "./PropertyDetails";
 
