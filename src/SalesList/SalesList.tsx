@@ -2,11 +2,20 @@ import React, { useState }  from 'react';
 import Property from "../models/Property";
 import Sale from '../models/Sale';
 import PropertyComponent from "../PropertyComponent/PropertyComponent";
+import { connectEth } from '../ABI/ContractController';
 
 class SalesList extends React.Component<any, {}> {
 
 
     render(){
+        connectEth()
+        .then(async (result) => {
+            const res = await result.contract.methods.salesLength().call();
+            console.log(res);
+        })
+        .catch(err => {
+            console.error(err.message);
+        });
         let sales = Array<Sale>();
 
         let property = new Property("ici1",23,"Description",1,"randompeople");

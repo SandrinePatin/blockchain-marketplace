@@ -8,7 +8,7 @@ class PropertyDetails extends React.Component<any, any> {
     render(){
         let property = this.props.property;
         let buttonSell = null;
-        if(property.owner == this.props.myaddr){
+        if(property.owner === this.props.myaddr){
             buttonSell=(<button className="btn btn-outline-success" onClick={this.sellProperty}>Mettre en vente</button>)
         }
         return (

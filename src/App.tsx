@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import MarketNavbar from './MarketNavbar';
 import SalesList from "./SalesList/SalesList";
 import MyProperties from "./MyProperties/MyProperties";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
+import MarketNavbar from './MarketNavbar';
 
 function App() {
     const me = "myaddresswithalotofletters"
