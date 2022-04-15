@@ -2,7 +2,7 @@ import React from 'react';
 import './PropertyComponent.css';
 import Property from "../models/Property";
 import PropertyDetailsPopup from "./PropertyDetails";
-import { connectEth } from '../ABI/ContractController';
+import { connectEth, createProperty, fetchProperties } from '../ABI/ContractController';
 import PropertyDetails from "./PropertyDetails";
 
 
@@ -24,6 +24,24 @@ class PropertyComponent extends React.Component<{data: any, myaddr: string}, { [
     buyMe = () => {
         if (this.contract !== null) {
             console.log('BOUGHT');
+        }
+    }
+
+    createSale = () => {
+        if (this.contract !== null) {
+            const property = new Property("Paris", 56, "Je suis une propriété, je fais 56m2 et j'ai 2 chambres", 2, "");
+            createProperty(property)
+            .then((status: any) => {
+                if (status !== undefined) {
+                    fetchProperties()
+                    .then(properties => {
+                        console.log(properties);
+                    });
+                }
+            })
+            .catch((err: Error) => {
+                console.error(err.message);
+            });
         }
     }
 
@@ -58,6 +76,7 @@ class PropertyComponent extends React.Component<{data: any, myaddr: string}, { [
                     {popup}
                     <div className='btn-group'>
                         <button className="btn btn-outline-info" onClick={this.openClosePopupHandler}>Voir les détails </button>
+                        <button className="btn btn-primary" onClick={this.createSale}>Create !</button>
                         <button className="btn btn-success" onClick={this.buyMe}>BuyMe !</button>
                     </div>
                 </div>

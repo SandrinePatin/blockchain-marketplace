@@ -1,1685 +1,1587 @@
 export const ABI = {
-    "contractName": "RealEstateMP",
-    "abi": [
-      {
-        "constant": true,
-        "inputs": [
-          {
-            "name": "",
-            "type": "address"
-          }
-        ],
-        "name": "ownerPropertiesCount",
-        "outputs": [
-          {
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [],
-        "name": "salesLength",
-        "outputs": [
-          {
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [
-          {
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "name": "sales",
-        "outputs": [
-          {
-            "name": "price",
-            "type": "uint256"
-          },
-          {
-            "name": "sellerId",
-            "type": "address"
-          },
-          {
-            "name": "saleDate",
-            "type": "uint256"
-          },
-          {
-            "name": "propertyId",
-            "type": "uint256"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": true,
-        "inputs": [
-          {
-            "name": "",
-            "type": "uint256"
-          }
-        ],
-        "name": "properties",
-        "outputs": [
-          {
-            "name": "localisation",
-            "type": "string"
-          },
-          {
-            "name": "area",
-            "type": "uint256"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "chamberCount",
-            "type": "uint256"
-          },
-          {
-            "name": "owner",
-            "type": "address"
-          }
-        ],
-        "payable": false,
-        "stateMutability": "view",
-        "type": "function"
-      },
-      {
-        "constant": false,
-        "inputs": [
-          {
-            "name": "_localisation",
-            "type": "string"
-          },
-          {
-            "name": "_area",
-            "type": "uint256"
-          },
-          {
-            "name": "_description",
-            "type": "string"
-          },
-          {
-            "name": "_chamberCount",
-            "type": "uint256"
-          }
-        ],
-        "name": "createProperty",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "constant": false,
-        "inputs": [
-          {
-            "name": "_price",
-            "type": "uint256"
-          },
-          {
-            "name": "_sellerId",
-            "type": "address"
-          },
-          {
-            "name": "_saleDate",
-            "type": "uint256"
-          },
-          {
-            "name": "_propertyId",
-            "type": "uint256"
-          }
-        ],
-        "name": "createSale",
-        "outputs": [],
-        "payable": false,
-        "stateMutability": "nonpayable",
-        "type": "function"
-      },
-      {
-        "constant": false,
-        "inputs": [
-          {
-            "name": "_saleId",
-            "type": "uint256"
-          }
-        ],
-        "name": "buy",
-        "outputs": [],
-        "payable": true,
-        "stateMutability": "payable",
-        "type": "function"
-      }
-    ],
-    "metadata": "{\"compiler\":{\"version\":\"0.4.21+commit.dfe3193c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"ownerPropertiesCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"salesLength\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_price\",\"type\":\"uint256\"},{\"name\":\"_sellerId\",\"type\":\"address\"},{\"name\":\"_saleDate\",\"type\":\"uint256\"},{\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"createSale\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"sales\",\"outputs\":[{\"name\":\"price\",\"type\":\"uint256\"},{\"name\":\"sellerId\",\"type\":\"address\"},{\"name\":\"saleDate\",\"type\":\"uint256\"},{\"name\":\"propertyId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_localisation\",\"type\":\"string\"},{\"name\":\"_area\",\"type\":\"uint256\"},{\"name\":\"_description\",\"type\":\"string\"},{\"name\":\"_chamberCount\",\"type\":\"uint256\"}],\"name\":\"createProperty\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_saleId\",\"type\":\"uint256\"}],\"name\":\"buy\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"properties\",\"outputs\":[{\"name\":\"localisation\",\"type\":\"string\"},{\"name\":\"area\",\"type\":\"uint256\"},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"chamberCount\",\"type\":\"uint256\"},{\"name\":\"owner\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/RealEstateMP.sol\":\"RealEstateMP\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/RealEstateMP.sol\":{\"keccak256\":\"0x7e3d7f4757e5990f762f46f30d491341e39140ccef79de4a386bc54aa9cccc80\",\"urls\":[\"bzzr://c7f1e2e2494bf53d9236e9e38449b58bd2f5ce1d842c5a567319a976f9590bb2\"]}},\"version\":1}",
-    "bytecode": "0x60606040526000600255341561001457600080fd5b610c71806100236000396000f300606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063110a41ca1461008857806313324e9c146100d557806356c9ef64146100fe578063b5f522f714610152578063c4294d6b146101ca578063d96a094a1461021e578063f7b1080814610236575b600080fd5b341561009357600080fd5b6100bf600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061037f565b6040518082815260200191505060405180910390f35b34156100e057600080fd5b6100e8610397565b6040518082815260200191505060405180910390f35b341561010957600080fd5b610150600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190803590602001909190505061039d565b005b341561015d57600080fd5b610173600480803590602001909190505061048a565b604051808581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390f35b34156101d557600080fd5b61021c6004808035906020019082018035906020019190919290803590602001909190803590602001908201803590602001919091929080359060200190919050506104e9565b005b61023460048080359060200190919050506106af565b005b341561024157600080fd5b61025760048080359060200190919050506107e6565b6040518080602001868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835288818151815260200191508051906020019080838360005b838110156102d95780820151818401526020810190506102be565b50505050905090810190601f1680156103065780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b8381101561033f578082015181840152602081019050610324565b50505050905090810190601f16801561036c5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b60036020528060005260406000206000915090505481565b60025481565b6103a561097b565b6080604051908101604052808681526020018573ffffffffffffffffffffffffffffffffffffffff168152602001848152602001838152509050600180548060010182816103f391906109ba565b916000526020600020906004020160008390919091506000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060408201518160020155606082015181600301555050506002600081548092919060010191905055505050505050565b60018181548110151561049957fe5b90600052602060002090600402016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154908060030154905084565b6104f16109ec565b60a06040519081016040528088888080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050815260200186815260200185858080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505081526020018381526020013373ffffffffffffffffffffffffffffffffffffffff168152509050600080548060010182816105a99190610a3e565b9160005260206000209060050201600083909190915060008201518160000190805190602001906105db929190610a70565b50602082015181600101556040820151816002019080519060200190610602929190610a70565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000815480929190600101919050555050505050505050565b60006001828154811015156106c057fe5b90600052602060002090600402016000015434101515156106e057600080fd5b6001828154811015156106ef57fe5b906000526020600020906004020160010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050151561076057600080fd5b60018281548110151561076f57fe5b90600052602060002090600402016003015490503360008281548110151561079357fe5b906000526020600020906005020160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b6000818154811015156107f557fe5b9060005260206000209060050201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108a15780601f10610876576101008083540402835291602001916108a1565b820191906000526020600020905b81548152906001019060200180831161088457829003601f168201915b505050505090806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109455780601f1061091a57610100808354040283529160200191610945565b820191906000526020600020905b81548152906001019060200180831161092857829003601f168201915b5050505050908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905085565b60806040519081016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff16815260200160008152602001600081525090565b8154818355818115116109e7576004028160040283600052602060002091820191016109e69190610af0565b5b505050565b60a060405190810160405280610a00610b4e565b815260200160008152602001610a14610b4e565b815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b815481835581811511610a6b57600502816005028360005260206000209182019101610a6a9190610b62565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610ab157805160ff1916838001178555610adf565b82800160010185558215610adf579182015b82811115610ade578251825591602001919060010190610ac3565b5b509050610aec9190610bd8565b5090565b610b4b91905b80821115610b47576000808201600090556001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff02191690556002820160009055600382016000905550600401610af6565b5090565b90565b602060405190810160405280600081525090565b610bd591905b80821115610bd15760008082016000610b819190610bfd565b6001820160009055600282016000610b999190610bfd565b60038201600090556004820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600501610b68565b5090565b90565b610bfa91905b80821115610bf6576000816000905550600101610bde565b5090565b90565b50805460018160011615610100020316600290046000825580601f10610c235750610c42565b601f016020900490600052602060002090810190610c419190610bd8565b5b505600a165627a7a723058201261c264e93308e2c308ac959d0d4c47981d712981610f291fe7c4cfc606d2390029",
-    "deployedBytecode": "0x606060405260043610610083576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063110a41ca1461008857806313324e9c146100d557806356c9ef64146100fe578063b5f522f714610152578063c4294d6b146101ca578063d96a094a1461021e578063f7b1080814610236575b600080fd5b341561009357600080fd5b6100bf600480803573ffffffffffffffffffffffffffffffffffffffff1690602001909190505061037f565b6040518082815260200191505060405180910390f35b34156100e057600080fd5b6100e8610397565b6040518082815260200191505060405180910390f35b341561010957600080fd5b610150600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff1690602001909190803590602001909190803590602001909190505061039d565b005b341561015d57600080fd5b610173600480803590602001909190505061048a565b604051808581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390f35b34156101d557600080fd5b61021c6004808035906020019082018035906020019190919290803590602001909190803590602001908201803590602001919091929080359060200190919050506104e9565b005b61023460048080359060200190919050506106af565b005b341561024157600080fd5b61025760048080359060200190919050506107e6565b6040518080602001868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835288818151815260200191508051906020019080838360005b838110156102d95780820151818401526020810190506102be565b50505050905090810190601f1680156103065780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b8381101561033f578082015181840152602081019050610324565b50505050905090810190601f16801561036c5780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b60036020528060005260406000206000915090505481565b60025481565b6103a561097b565b6080604051908101604052808681526020018573ffffffffffffffffffffffffffffffffffffffff168152602001848152602001838152509050600180548060010182816103f391906109ba565b916000526020600020906004020160008390919091506000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060408201518160020155606082015181600301555050506002600081548092919060010191905055505050505050565b60018181548110151561049957fe5b90600052602060002090600402016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154908060030154905084565b6104f16109ec565b60a06040519081016040528088888080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050815260200186815260200185858080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505081526020018381526020013373ffffffffffffffffffffffffffffffffffffffff168152509050600080548060010182816105a99190610a3e565b9160005260206000209060050201600083909190915060008201518160000190805190602001906105db929190610a70565b50602082015181600101556040820151816002019080519060200190610602929190610a70565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050600360003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000815480929190600101919050555050505050505050565b60006001828154811015156106c057fe5b90600052602060002090600402016000015434101515156106e057600080fd5b6001828154811015156106ef57fe5b906000526020600020906004020160010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f19350505050151561076057600080fd5b60018281548110151561076f57fe5b90600052602060002090600402016003015490503360008281548110151561079357fe5b906000526020600020906005020160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b6000818154811015156107f557fe5b9060005260206000209060050201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108a15780601f10610876576101008083540402835291602001916108a1565b820191906000526020600020905b81548152906001019060200180831161088457829003601f168201915b505050505090806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109455780601f1061091a57610100808354040283529160200191610945565b820191906000526020600020905b81548152906001019060200180831161092857829003601f168201915b5050505050908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905085565b60806040519081016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff16815260200160008152602001600081525090565b8154818355818115116109e7576004028160040283600052602060002091820191016109e69190610af0565b5b505050565b60a060405190810160405280610a00610b4e565b815260200160008152602001610a14610b4e565b815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b815481835581811511610a6b57600502816005028360005260206000209182019101610a6a9190610b62565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610ab157805160ff1916838001178555610adf565b82800160010185558215610adf579182015b82811115610ade578251825591602001919060010190610ac3565b5b509050610aec9190610bd8565b5090565b610b4b91905b80821115610b47576000808201600090556001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff02191690556002820160009055600382016000905550600401610af6565b5090565b90565b602060405190810160405280600081525090565b610bd591905b80821115610bd15760008082016000610b819190610bfd565b6001820160009055600282016000610b999190610bfd565b60038201600090556004820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600501610b68565b5090565b90565b610bfa91905b80821115610bf6576000816000905550600101610bde565b5090565b90565b50805460018160011615610100020316600290046000825580601f10610c235750610c42565b601f016020900490600052602060002090810190610c419190610bd8565b5b505600a165627a7a723058201261c264e93308e2c308ac959d0d4c47981d712981610f291fe7c4cfc606d2390029",
-    "sourceMap": "26:1296:1:-;;;415:1;389:27;;26:1296;;;;;;;;;;;;;;",
-    "deployedSourceMap": "26:1296:1:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;423:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;389:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;801:233;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;364:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;487:308;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1040:280;;;;;;;;;;;;;;;;;;330:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;330:28:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;330:28:1;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;423:53;;;;;;;;;;;;;;;;;:::o;389:27::-;;;;:::o;801:233::-;906:19;;:::i;:::-;928:47;;;;;;;;;933:6;928:47;;;;941:9;928:47;;;;;;952:9;928:47;;;;963:11;928:47;;;906:69;;985:5;:19;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;996:7;985:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1014:11;;:13;;;;;;;;;;;;;801:233;;;;;:::o;364:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;487:308::-;605:27;;:::i;:::-;635:71;;;;;;;;;644:13;;635:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;659:5;635:71;;;;666:12;;635:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;680:13;635:71;;;;695:10;635:71;;;;;605:101;;716:10;:28;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;732:11;716:28;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;754:20;:32;775:10;754:32;;;;;;;;;;;;;;;;:34;;;;;;;;;;;;;487:308;;;;;;;:::o;1040:280::-;1211:19;1121:5;1127:7;1121:14;;;;;;;;;;;;;;;;;;;;:20;;;1107:9;1102:39;;1094:48;;;;;;;;1152:5;1158:7;1152:14;;;;;;;;;;;;;;;;;;;;:23;;;;;;;;;;;;:32;;:49;1190:9;1152:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1233:5;1239:7;1233:14;;;;;;;;;;;;;;;;;;;;:25;;;1211:47;;1303:10;1268;1279:14;1268:26;;;;;;;;;;;;;;;;;;;;:32;;;:45;;;;;;;;;;;;;;;;;;1040:280;;:::o;330:28::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;26:1296::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o",
-    "source": "pragma solidity ^0.4.21;\n\ncontract RealEstateMP {\n\n    struct Property {\n        string localisation;\n        uint area;\n        string description;\n        uint chamberCount;\n        address owner;\n    }\n\n    struct Sale {\n        uint price;\n        address sellerId;\n        uint saleDate;\n        uint propertyId;\n    }\n\n\n    Property[] public properties;\n    Sale[] public sales;\n    uint public salesLength = 0;\n\n    mapping (address => uint) public ownerPropertiesCount;    \n\n    function createProperty(string _localisation, uint _area, string _description, uint _chamberCount) external {\n        Property memory newProperty = Property(_localisation, _area, _description, _chamberCount, msg.sender);\n        properties.push(newProperty);\n        ownerPropertiesCount[msg.sender]++;\n    }\n\n    function createSale(uint _price, address _sellerId, uint _saleDate, uint _propertyId) external {\n        Sale memory newSale = Sale(_price, _sellerId, _saleDate, _propertyId);\n        sales.push(newSale);\n        salesLength++;\n    }\n\n    function buy(uint _saleId) external payable {\n        require(uint(msg.value) >= sales[_saleId].price);\n        sales[_saleId].sellerId.transfer(uint(msg.value));\n        uint propertySelled = sales[_saleId].propertyId;\n        properties[propertySelled].owner = msg.sender;\n    }\n}",
-    "sourcePath": "/Users/sokaii/Documents/ESGI/5MOC/Blockchain/RealEstateMP/contracts/RealEstateMP.sol",
-    "ast": {
-      "absolutePath": "project:/contracts/RealEstateMP.sol",
-      "exportedSymbols": {
-        "RealEstateMP": [
-          201
-        ]
-      },
-      "id": 202,
-      "nodeType": "SourceUnit",
-      "nodes": [
+  "contractName": "RealEstateMP",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [
         {
-          "id": 58,
-          "literals": [
-            "solidity",
-            "^",
-            "0.4",
-            ".21"
-          ],
-          "nodeType": "PragmaDirective",
-          "src": "0:24:1"
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "name": "ownerPropertiesCount",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "salesLength",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "propertiesLength",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "sales",
+      "outputs": [
+        {
+          "name": "price",
+          "type": "uint256"
         },
         {
-          "baseContracts": [],
-          "contractDependencies": [],
-          "contractKind": "contract",
-          "documentation": null,
-          "fullyImplemented": true,
-          "id": 201,
-          "linearizedBaseContracts": [
-            201
-          ],
-          "name": "RealEstateMP",
-          "nodeType": "ContractDefinition",
-          "nodes": [
-            {
-              "canonicalName": "RealEstateMP.Property",
-              "id": 69,
-              "members": [
-                {
-                  "constant": false,
-                  "id": 60,
-                  "name": "localisation",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 69,
-                  "src": "81:19:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
+          "name": "sellerId",
+          "type": "address"
+        },
+        {
+          "name": "saleDate",
+          "type": "uint256"
+        },
+        {
+          "name": "propertyId",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "name": "properties",
+      "outputs": [
+        {
+          "name": "localisation",
+          "type": "string"
+        },
+        {
+          "name": "area",
+          "type": "uint256"
+        },
+        {
+          "name": "description",
+          "type": "string"
+        },
+        {
+          "name": "chamberCount",
+          "type": "uint256"
+        },
+        {
+          "name": "owner",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_localisation",
+          "type": "string"
+        },
+        {
+          "name": "_area",
+          "type": "uint256"
+        },
+        {
+          "name": "_description",
+          "type": "string"
+        },
+        {
+          "name": "_chamberCount",
+          "type": "uint256"
+        }
+      ],
+      "name": "createProperty",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_price",
+          "type": "uint256"
+        },
+        {
+          "name": "_sellerId",
+          "type": "address"
+        },
+        {
+          "name": "_saleDate",
+          "type": "uint256"
+        },
+        {
+          "name": "_propertyId",
+          "type": "uint256"
+        }
+      ],
+      "name": "createSale",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_saleId",
+          "type": "uint256"
+        }
+      ],
+      "name": "buy",
+      "outputs": [],
+      "payable": true,
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.4.21+commit.dfe3193c\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"address\"}],\"name\":\"ownerPropertiesCount\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"salesLength\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[],\"name\":\"propertiesLength\",\"outputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_price\",\"type\":\"uint256\"},{\"name\":\"_sellerId\",\"type\":\"address\"},{\"name\":\"_saleDate\",\"type\":\"uint256\"},{\"name\":\"_propertyId\",\"type\":\"uint256\"}],\"name\":\"createSale\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"sales\",\"outputs\":[{\"name\":\"price\",\"type\":\"uint256\"},{\"name\":\"sellerId\",\"type\":\"address\"},{\"name\":\"saleDate\",\"type\":\"uint256\"},{\"name\":\"propertyId\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_localisation\",\"type\":\"string\"},{\"name\":\"_area\",\"type\":\"uint256\"},{\"name\":\"_description\",\"type\":\"string\"},{\"name\":\"_chamberCount\",\"type\":\"uint256\"}],\"name\":\"createProperty\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_saleId\",\"type\":\"uint256\"}],\"name\":\"buy\",\"outputs\":[],\"payable\":true,\"stateMutability\":\"payable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"properties\",\"outputs\":[{\"name\":\"localisation\",\"type\":\"string\"},{\"name\":\"area\",\"type\":\"uint256\"},{\"name\":\"description\",\"type\":\"string\"},{\"name\":\"chamberCount\",\"type\":\"uint256\"},{\"name\":\"owner\",\"type\":\"address\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"project:/contracts/RealEstateMP.sol\":\"RealEstateMP\"},\"evmVersion\":\"byzantium\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"project:/contracts/RealEstateMP.sol\":{\"keccak256\":\"0xf36a7e8704743fec91ca302e350f8e6784d72f9429da09d72cc63fa805051b93\",\"urls\":[\"bzzr://31fea542126cbee25b31faf346419903afb470e5548de0bb8e54af3c79cd00c5\"]}},\"version\":1}",
+  "bytecode": "0x60606040526000600355341561001457600080fd5b610cbd806100236000396000f30060606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063110a41ca1461009357806313324e9c146100e057806340e4a05e1461010957806356c9ef6414610132578063b5f522f714610186578063c4294d6b146101fe578063d96a094a14610252578063f7b108081461026a575b600080fd5b341561009e57600080fd5b6100ca600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506103b3565b6040518082815260200191505060405180910390f35b34156100eb57600080fd5b6100f36103cb565b6040518082815260200191505060405180910390f35b341561011457600080fd5b61011c6103d1565b6040518082815260200191505060405180910390f35b341561013d57600080fd5b610184600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919080359060200190919050506103d7565b005b341561019157600080fd5b6101a760048080359060200190919050506104c4565b604051808581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390f35b341561020957600080fd5b610250600480803590602001908201803590602001919091929080359060200190919080359060200190820180359060200191909192908035906020019091905050610523565b005b61026860048080359060200190919050506106fb565b005b341561027557600080fd5b61028b6004808035906020019091905050610832565b6040518080602001868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835288818151815260200191508051906020019080838360005b8381101561030d5780820151818401526020810190506102f2565b50505050905090810190601f16801561033a5780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b83811015610373578082015181840152602081019050610358565b50505050905090810190601f1680156103a05780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b60046020528060005260406000206000915090505481565b60035481565b60015481565b6103df6109c7565b6080604051908101604052808681526020018573ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018381525090506002805480600101828161042d9190610a06565b916000526020600020906004020160008390919091506000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060408201518160020155606082015181600301555050506003600081548092919060010191905055505050505050565b6002818154811015156104d357fe5b90600052602060002090600402016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154908060030154905084565b61052b610a38565b60a06040519081016040528088888080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050815260200186815260200185858080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505081526020018381526020013373ffffffffffffffffffffffffffffffffffffffff168152509050600080548060010182816105e39190610a8a565b916000526020600020906005020160008390919091506000820151816000019080519060200190610615929190610abc565b5060208201518160010155604082015181600201908051906020019061063c929190610abc565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050600160008154809291906001019190505550600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000815480929190600101919050555050505050505050565b600060028281548110151561070c57fe5b906000526020600020906004020160000154341015151561072c57600080fd5b60028281548110151561073b57fe5b906000526020600020906004020160010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f1935050505015156107ac57600080fd5b6002828154811015156107bb57fe5b9060005260206000209060040201600301549050336000828154811015156107df57fe5b906000526020600020906005020160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b60008181548110151561084157fe5b9060005260206000209060050201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108ed5780601f106108c2576101008083540402835291602001916108ed565b820191906000526020600020905b8154815290600101906020018083116108d057829003601f168201915b505050505090806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109915780601f1061096657610100808354040283529160200191610991565b820191906000526020600020905b81548152906001019060200180831161097457829003601f168201915b5050505050908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905085565b60806040519081016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff16815260200160008152602001600081525090565b815481835581811511610a3357600402816004028360005260206000209182019101610a329190610b3c565b5b505050565b60a060405190810160405280610a4c610b9a565b815260200160008152602001610a60610b9a565b815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b815481835581811511610ab757600502816005028360005260206000209182019101610ab69190610bae565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610afd57805160ff1916838001178555610b2b565b82800160010185558215610b2b579182015b82811115610b2a578251825591602001919060010190610b0f565b5b509050610b389190610c24565b5090565b610b9791905b80821115610b93576000808201600090556001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff02191690556002820160009055600382016000905550600401610b42565b5090565b90565b602060405190810160405280600081525090565b610c2191905b80821115610c1d5760008082016000610bcd9190610c49565b6001820160009055600282016000610be59190610c49565b60038201600090556004820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600501610bb4565b5090565b90565b610c4691905b80821115610c42576000816000905550600101610c2a565b5090565b90565b50805460018160011615610100020316600290046000825580601f10610c6f5750610c8e565b601f016020900490600052602060002090810190610c8d9190610c24565b5b505600a165627a7a723058201c20abb678fd36d8d19d1d71b69c24f3fe220d1892d0212e93b38840dc3a40f90029",
+  "deployedBytecode": "0x60606040526004361061008e576000357c0100000000000000000000000000000000000000000000000000000000900463ffffffff168063110a41ca1461009357806313324e9c146100e057806340e4a05e1461010957806356c9ef6414610132578063b5f522f714610186578063c4294d6b146101fe578063d96a094a14610252578063f7b108081461026a575b600080fd5b341561009e57600080fd5b6100ca600480803573ffffffffffffffffffffffffffffffffffffffff169060200190919050506103b3565b6040518082815260200191505060405180910390f35b34156100eb57600080fd5b6100f36103cb565b6040518082815260200191505060405180910390f35b341561011457600080fd5b61011c6103d1565b6040518082815260200191505060405180910390f35b341561013d57600080fd5b610184600480803590602001909190803573ffffffffffffffffffffffffffffffffffffffff169060200190919080359060200190919080359060200190919050506103d7565b005b341561019157600080fd5b6101a760048080359060200190919050506104c4565b604051808581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff16815260200183815260200182815260200194505050505060405180910390f35b341561020957600080fd5b610250600480803590602001908201803590602001919091929080359060200190919080359060200190820180359060200191909192908035906020019091905050610523565b005b61026860048080359060200190919050506106fb565b005b341561027557600080fd5b61028b6004808035906020019091905050610832565b6040518080602001868152602001806020018581526020018473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff168152602001838103835288818151815260200191508051906020019080838360005b8381101561030d5780820151818401526020810190506102f2565b50505050905090810190601f16801561033a5780820380516001836020036101000a031916815260200191505b50838103825286818151815260200191508051906020019080838360005b83811015610373578082015181840152602081019050610358565b50505050905090810190601f1680156103a05780820380516001836020036101000a031916815260200191505b5097505050505050505060405180910390f35b60046020528060005260406000206000915090505481565b60035481565b60015481565b6103df6109c7565b6080604051908101604052808681526020018573ffffffffffffffffffffffffffffffffffffffff1681526020018481526020018381525090506002805480600101828161042d9190610a06565b916000526020600020906004020160008390919091506000820151816000015560208201518160010160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff16021790555060408201518160020155606082015181600301555050506003600081548092919060010191905055505050505050565b6002818154811015156104d357fe5b90600052602060002090600402016000915090508060000154908060010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16908060020154908060030154905084565b61052b610a38565b60a06040519081016040528088888080601f016020809104026020016040519081016040528093929190818152602001838380828437820191505050505050815260200186815260200185858080601f01602080910402602001604051908101604052809392919081815260200183838082843782019150505050505081526020018381526020013373ffffffffffffffffffffffffffffffffffffffff168152509050600080548060010182816105e39190610a8a565b916000526020600020906005020160008390919091506000820151816000019080519060200190610615929190610abc565b5060208201518160010155604082015181600201908051906020019061063c929190610abc565b506060820151816003015560808201518160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff160217905550505050600160008154809291906001019190505550600460003373ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff1681526020019081526020016000206000815480929190600101919050555050505050505050565b600060028281548110151561070c57fe5b906000526020600020906004020160000154341015151561072c57600080fd5b60028281548110151561073b57fe5b906000526020600020906004020160010160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff1673ffffffffffffffffffffffffffffffffffffffff166108fc349081150290604051600060405180830381858888f1935050505015156107ac57600080fd5b6002828154811015156107bb57fe5b9060005260206000209060040201600301549050336000828154811015156107df57fe5b906000526020600020906005020160040160006101000a81548173ffffffffffffffffffffffffffffffffffffffff021916908373ffffffffffffffffffffffffffffffffffffffff1602179055505050565b60008181548110151561084157fe5b9060005260206000209060050201600091509050806000018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156108ed5780601f106108c2576101008083540402835291602001916108ed565b820191906000526020600020905b8154815290600101906020018083116108d057829003601f168201915b505050505090806001015490806002018054600181600116156101000203166002900480601f0160208091040260200160405190810160405280929190818152602001828054600181600116156101000203166002900480156109915780601f1061096657610100808354040283529160200191610991565b820191906000526020600020905b81548152906001019060200180831161097457829003601f168201915b5050505050908060030154908060040160009054906101000a900473ffffffffffffffffffffffffffffffffffffffff16905085565b60806040519081016040528060008152602001600073ffffffffffffffffffffffffffffffffffffffff16815260200160008152602001600081525090565b815481835581811511610a3357600402816004028360005260206000209182019101610a329190610b3c565b5b505050565b60a060405190810160405280610a4c610b9a565b815260200160008152602001610a60610b9a565b815260200160008152602001600073ffffffffffffffffffffffffffffffffffffffff1681525090565b815481835581811511610ab757600502816005028360005260206000209182019101610ab69190610bae565b5b505050565b828054600181600116156101000203166002900490600052602060002090601f016020900481019282601f10610afd57805160ff1916838001178555610b2b565b82800160010185558215610b2b579182015b82811115610b2a578251825591602001919060010190610b0f565b5b509050610b389190610c24565b5090565b610b9791905b80821115610b93576000808201600090556001820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff02191690556002820160009055600382016000905550600401610b42565b5090565b90565b602060405190810160405280600081525090565b610c2191905b80821115610c1d5760008082016000610bcd9190610c49565b6001820160009055600282016000610be59190610c49565b60038201600090556004820160006101000a81549073ffffffffffffffffffffffffffffffffffffffff021916905550600501610bb4565b5090565b90565b610c4691905b80821115610c42576000816000905550600101610c2a565b5090565b90565b50805460018160011615610100020316600290046000825580601f10610c6f5750610c8e565b601f016020900490600052602060002090810190610c8d9190610c24565b5b505600a165627a7a723058201c20abb678fd36d8d19d1d71b69c24f3fe220d1892d0212e93b38840dc3a40f90029",
+  "sourceMap": "26:1358:0:-;;;449:1;423:27;;26:1358;;;;;;;;;;;;;;",
+  "deployedSourceMap": "26:1358:0:-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;457:53;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;423:27;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;364:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;863:233;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;398:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;521:336;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1102:280;;;;;;;;;;;;;;;;;;330:28;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;330:28:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;23:1:-1;8:100;33:3;30:1;27:10;8:100;;;99:1;94:3;90:11;84:18;80:1;75:3;71:11;64:39;52:2;49:1;45:10;40:15;;8:100;;;12:14;330:28:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;457:53;;;;;;;;;;;;;;;;;:::o;423:27::-;;;;:::o;364:28::-;;;;:::o;863:233::-;968:19;;:::i;:::-;990:47;;;;;;;;;995:6;990:47;;;;1003:9;990:47;;;;;;1014:9;990:47;;;;1025:11;990:47;;;968:69;;1047:5;:19;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;1058:7;1047:19;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1076:11;;:13;;;;;;;;;;;;;863:233;;;;;:::o;398:19::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;521:336::-;639:27;;:::i;:::-;669:71;;;;;;;;;678:13;;669:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;693:5;669:71;;;;700:12;;669:71;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;714:13;669:71;;;;729:10;669:71;;;;;639:101;;750:10;:28;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;766:11;750:28;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;788:16;;:18;;;;;;;;;;;;;816:20;:32;837:10;816:32;;;;;;;;;;;;;;;;:34;;;;;;;;;;;;;521:336;;;;;;;:::o;1102:280::-;1273:19;1183:5;1189:7;1183:14;;;;;;;;;;;;;;;;;;;;:20;;;1169:9;1164:39;;1156:48;;;;;;;;1214:5;1220:7;1214:14;;;;;;;;;;;;;;;;;;;;:23;;;;;;;;;;;;:32;;:49;1252:9;1214:49;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;1295:5;1301:7;1295:14;;;;;;;;;;;;;;;;;;;;:25;;;1273:47;;1365:10;1330;1341:14;1330:26;;;;;;;;;;;;;;;;;;;;:32;;;:45;;;;;;;;;;;;;;;;;;1102:280;;:::o;330:28::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;26:1358::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;:::o;:::-;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;:::i;:::-;;;:::o",
+  "source": "pragma solidity ^0.4.21;\n\ncontract RealEstateMP {\n\n    struct Property {\n        string localisation;\n        uint area;\n        string description;\n        uint chamberCount;\n        address owner;\n    }\n\n    struct Sale {\n        uint price;\n        address sellerId;\n        uint saleDate;\n        uint propertyId;\n    }\n\n\n    Property[] public properties;\n    uint public propertiesLength;\n    Sale[] public sales;\n    uint public salesLength = 0;\n\n    mapping (address => uint) public ownerPropertiesCount;    \n\n    function createProperty(string _localisation, uint _area, string _description, uint _chamberCount) external {\n        Property memory newProperty = Property(_localisation, _area, _description, _chamberCount, msg.sender);\n        properties.push(newProperty);\n        propertiesLength++;\n        ownerPropertiesCount[msg.sender]++;\n    }\n\n    function createSale(uint _price, address _sellerId, uint _saleDate, uint _propertyId) external {\n        Sale memory newSale = Sale(_price, _sellerId, _saleDate, _propertyId);\n        sales.push(newSale);\n        salesLength++;\n    }\n\n    function buy(uint _saleId) external payable {\n        require(uint(msg.value) >= sales[_saleId].price);\n        sales[_saleId].sellerId.transfer(uint(msg.value));\n        uint propertySelled = sales[_saleId].propertyId;\n        properties[propertySelled].owner = msg.sender;\n    }\n}                          ",
+  "sourcePath": "/Users/sokaii/Documents/ESGI/5MOC/Blockchain/RealEstateMP/contracts/RealEstateMP.sol",
+  "ast": {
+    "absolutePath": "project:/contracts/RealEstateMP.sol",
+    "exportedSymbols": {
+      "RealEstateMP": [
+        149
+      ]
+    },
+    "id": 150,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".21"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 149,
+        "linearizedBaseContracts": [
+          149
+        ],
+        "name": "RealEstateMP",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "canonicalName": "RealEstateMP.Property",
+            "id": 12,
+            "members": [
+              {
+                "constant": false,
+                "id": 3,
+                "name": "localisation",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "81:19:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 2,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "81:6:0",
                   "typeDescriptions": {
                     "typeIdentifier": "t_string_storage_ptr",
                     "typeString": "string storage pointer"
-                  },
-                  "typeName": {
-                    "id": 59,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "81:6:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string storage pointer"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 62,
-                  "name": "area",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 69,
-                  "src": "110:9:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 61,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "110:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 64,
-                  "name": "description",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 69,
-                  "src": "129:18:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_string_storage_ptr",
-                    "typeString": "string storage pointer"
-                  },
-                  "typeName": {
-                    "id": 63,
-                    "name": "string",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "129:6:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_storage_ptr",
-                      "typeString": "string storage pointer"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 66,
-                  "name": "chamberCount",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 69,
-                  "src": "157:17:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 65,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "157:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 68,
-                  "name": "owner",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 69,
-                  "src": "184:13:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 67,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "184:7:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "name": "Property",
-              "nodeType": "StructDefinition",
-              "scope": 201,
-              "src": "55:149:1",
-              "visibility": "public"
-            },
-            {
-              "canonicalName": "RealEstateMP.Sale",
-              "id": 78,
-              "members": [
-                {
-                  "constant": false,
-                  "id": 71,
-                  "name": "price",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "232:10:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 70,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "232:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 73,
-                  "name": "sellerId",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "252:16:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  },
-                  "typeName": {
-                    "id": 72,
-                    "name": "address",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "252:7:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 75,
-                  "name": "saleDate",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "278:13:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 74,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "278:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                },
-                {
-                  "constant": false,
-                  "id": 77,
-                  "name": "propertyId",
-                  "nodeType": "VariableDeclaration",
-                  "scope": 78,
-                  "src": "301:15:1",
-                  "stateVariable": false,
-                  "storageLocation": "default",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_uint256",
-                    "typeString": "uint256"
-                  },
-                  "typeName": {
-                    "id": 76,
-                    "name": "uint",
-                    "nodeType": "ElementaryTypeName",
-                    "src": "301:4:1",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    }
-                  },
-                  "value": null,
-                  "visibility": "internal"
-                }
-              ],
-              "name": "Sale",
-              "nodeType": "StructDefinition",
-              "scope": 201,
-              "src": "210:113:1",
-              "visibility": "public"
-            },
-            {
-              "constant": false,
-              "id": 81,
-              "name": "properties",
-              "nodeType": "VariableDeclaration",
-              "scope": 201,
-              "src": "330:28:1",
-              "stateVariable": true,
-              "storageLocation": "default",
-              "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Property_$69_storage_$dyn_storage",
-                "typeString": "struct RealEstateMP.Property storage ref[] storage ref"
-              },
-              "typeName": {
-                "baseType": {
-                  "contractScope": null,
-                  "id": 79,
-                  "name": "Property",
-                  "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 69,
-                  "src": "330:8:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Property_$69_storage_ptr",
-                    "typeString": "struct RealEstateMP.Property storage pointer"
                   }
                 },
-                "id": 80,
-                "length": null,
-                "nodeType": "ArrayTypeName",
-                "src": "330:10:1",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_Property_$69_storage_$dyn_storage_ptr",
-                  "typeString": "struct RealEstateMP.Property storage ref[] storage pointer"
-                }
+                "value": null,
+                "visibility": "internal"
               },
-              "value": null,
-              "visibility": "public"
-            },
-            {
-              "constant": false,
-              "id": 84,
-              "name": "sales",
-              "nodeType": "VariableDeclaration",
-              "scope": 201,
-              "src": "364:19:1",
-              "stateVariable": true,
-              "storageLocation": "default",
-              "typeDescriptions": {
-                "typeIdentifier": "t_array$_t_struct$_Sale_$78_storage_$dyn_storage",
-                "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
-              },
-              "typeName": {
-                "baseType": {
-                  "contractScope": null,
-                  "id": 82,
-                  "name": "Sale",
-                  "nodeType": "UserDefinedTypeName",
-                  "referencedDeclaration": 78,
-                  "src": "364:4:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_struct$_Sale_$78_storage_ptr",
-                    "typeString": "struct RealEstateMP.Sale storage pointer"
-                  }
-                },
-                "id": 83,
-                "length": null,
-                "nodeType": "ArrayTypeName",
-                "src": "364:6:1",
-                "typeDescriptions": {
-                  "typeIdentifier": "t_array$_t_struct$_Sale_$78_storage_$dyn_storage_ptr",
-                  "typeString": "struct RealEstateMP.Sale storage ref[] storage pointer"
-                }
-              },
-              "value": null,
-              "visibility": "public"
-            },
-            {
-              "constant": false,
-              "id": 87,
-              "name": "salesLength",
-              "nodeType": "VariableDeclaration",
-              "scope": 201,
-              "src": "389:27:1",
-              "stateVariable": true,
-              "storageLocation": "default",
-              "typeDescriptions": {
-                "typeIdentifier": "t_uint256",
-                "typeString": "uint256"
-              },
-              "typeName": {
-                "id": 85,
-                "name": "uint",
-                "nodeType": "ElementaryTypeName",
-                "src": "389:4:1",
+              {
+                "constant": false,
+                "id": 5,
+                "name": "area",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "110:9:0",
+                "stateVariable": false,
+                "storageLocation": "default",
                 "typeDescriptions": {
                   "typeIdentifier": "t_uint256",
                   "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 4,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "110:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 7,
+                "name": "description",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "129:18:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_string_storage_ptr",
+                  "typeString": "string storage pointer"
+                },
+                "typeName": {
+                  "id": 6,
+                  "name": "string",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "129:6:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_storage_ptr",
+                    "typeString": "string storage pointer"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 9,
+                "name": "chamberCount",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "157:17:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 8,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "157:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 11,
+                "name": "owner",
+                "nodeType": "VariableDeclaration",
+                "scope": 12,
+                "src": "184:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 10,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "184:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Property",
+            "nodeType": "StructDefinition",
+            "scope": 149,
+            "src": "55:149:0",
+            "visibility": "public"
+          },
+          {
+            "canonicalName": "RealEstateMP.Sale",
+            "id": 21,
+            "members": [
+              {
+                "constant": false,
+                "id": 14,
+                "name": "price",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "232:10:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 13,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "232:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 16,
+                "name": "sellerId",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "252:16:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 15,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "252:7:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 18,
+                "name": "saleDate",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "278:13:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 17,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "278:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 20,
+                "name": "propertyId",
+                "nodeType": "VariableDeclaration",
+                "scope": 21,
+                "src": "301:15:0",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                },
+                "typeName": {
+                  "id": 19,
+                  "name": "uint",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "301:4:0",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  }
+                },
+                "value": null,
+                "visibility": "internal"
+              }
+            ],
+            "name": "Sale",
+            "nodeType": "StructDefinition",
+            "scope": 149,
+            "src": "210:113:0",
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 24,
+            "name": "properties",
+            "nodeType": "VariableDeclaration",
+            "scope": 149,
+            "src": "330:28:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Property_$12_storage_$dyn_storage",
+              "typeString": "struct RealEstateMP.Property storage ref[] storage ref"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 22,
+                "name": "Property",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 12,
+                "src": "330:8:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Property_$12_storage_ptr",
+                  "typeString": "struct RealEstateMP.Property storage pointer"
                 }
               },
-              "value": {
-                "argumentTypes": null,
-                "hexValue": "30",
-                "id": 86,
-                "isConstant": false,
-                "isLValue": false,
-                "isPure": true,
-                "kind": "number",
-                "lValueRequested": false,
-                "nodeType": "Literal",
-                "src": "415:1:1",
-                "subdenomination": null,
-                "typeDescriptions": {
-                  "typeIdentifier": "t_rational_0_by_1",
-                  "typeString": "int_const 0"
-                },
-                "value": "0"
-              },
-              "visibility": "public"
+              "id": 23,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "330:10:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Property_$12_storage_$dyn_storage_ptr",
+                "typeString": "struct RealEstateMP.Property storage ref[] storage pointer"
+              }
             },
-            {
-              "constant": false,
-              "id": 91,
-              "name": "ownerPropertiesCount",
-              "nodeType": "VariableDeclaration",
-              "scope": 201,
-              "src": "423:53:1",
-              "stateVariable": true,
-              "storageLocation": "default",
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 26,
+            "name": "propertiesLength",
+            "nodeType": "VariableDeclaration",
+            "scope": 149,
+            "src": "364:28:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 25,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "364:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 29,
+            "name": "sales",
+            "nodeType": "VariableDeclaration",
+            "scope": 149,
+            "src": "398:19:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_struct$_Sale_$21_storage_$dyn_storage",
+              "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
+            },
+            "typeName": {
+              "baseType": {
+                "contractScope": null,
+                "id": 27,
+                "name": "Sale",
+                "nodeType": "UserDefinedTypeName",
+                "referencedDeclaration": 21,
+                "src": "398:4:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_struct$_Sale_$21_storage_ptr",
+                  "typeString": "struct RealEstateMP.Sale storage pointer"
+                }
+              },
+              "id": 28,
+              "length": null,
+              "nodeType": "ArrayTypeName",
+              "src": "398:6:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_struct$_Sale_$21_storage_$dyn_storage_ptr",
+                "typeString": "struct RealEstateMP.Sale storage ref[] storage pointer"
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 32,
+            "name": "salesLength",
+            "nodeType": "VariableDeclaration",
+            "scope": 149,
+            "src": "423:27:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 30,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "423:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 31,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "449:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          },
+          {
+            "constant": false,
+            "id": 36,
+            "name": "ownerPropertiesCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 149,
+            "src": "457:53:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+              "typeString": "mapping(address => uint256)"
+            },
+            "typeName": {
+              "id": 35,
+              "keyType": {
+                "id": 33,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "466:7:0",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "nodeType": "Mapping",
+              "src": "457:25:0",
               "typeDescriptions": {
                 "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
                 "typeString": "mapping(address => uint256)"
               },
-              "typeName": {
-                "id": 90,
-                "keyType": {
-                  "id": 88,
-                  "name": "address",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "432:7:1",
-                  "typeDescriptions": {
-                    "typeIdentifier": "t_address",
-                    "typeString": "address"
-                  }
-                },
-                "nodeType": "Mapping",
-                "src": "423:25:1",
+              "valueType": {
+                "id": 34,
+                "name": "uint",
+                "nodeType": "ElementaryTypeName",
+                "src": "477:4:0",
                 "typeDescriptions": {
-                  "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
-                  "typeString": "mapping(address => uint256)"
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              }
+            },
+            "value": null,
+            "visibility": "public"
+          },
+          {
+            "body": {
+              "id": 73,
+              "nodeType": "Block",
+              "src": "629:228:0",
+              "statements": [
+                {
+                  "assignments": [
+                    48
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 48,
+                      "name": "newProperty",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 74,
+                      "src": "639:27:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Property_$12_memory_ptr",
+                        "typeString": "struct RealEstateMP.Property memory"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 47,
+                        "name": "Property",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 12,
+                        "src": "639:8:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Property_$12_storage_ptr",
+                          "typeString": "struct RealEstateMP.Property storage pointer"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 57,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 50,
+                        "name": "_localisation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 38,
+                        "src": "678:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 51,
+                        "name": "_area",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 40,
+                        "src": "693:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 52,
+                        "name": "_description",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 42,
+                        "src": "700:12:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "id": 53,
+                        "name": "_chamberCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 44,
+                        "src": "714:13:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 54,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 162,
+                          "src": "729:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 55,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "729:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_string_calldata_ptr",
+                          "typeString": "string calldata"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      ],
+                      "id": 49,
+                      "name": "Property",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 12,
+                      "src": "669:8:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Property_$12_storage_ptr_$",
+                        "typeString": "type(struct RealEstateMP.Property storage pointer)"
+                      }
+                    },
+                    "id": 56,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "669:71:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Property_$12_memory",
+                      "typeString": "struct RealEstateMP.Property memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "639:101:0"
                 },
-                "valueType": {
-                  "id": 89,
-                  "name": "uint",
-                  "nodeType": "ElementaryTypeName",
-                  "src": "443:4:1",
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 61,
+                        "name": "newProperty",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48,
+                        "src": "766:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Property_$12_memory_ptr",
+                          "typeString": "struct RealEstateMP.Property memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Property_$12_memory_ptr",
+                          "typeString": "struct RealEstateMP.Property memory"
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 58,
+                        "name": "properties",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 24,
+                        "src": "750:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Property_$12_storage_$dyn_storage",
+                          "typeString": "struct RealEstateMP.Property storage ref[] storage ref"
+                        }
+                      },
+                      "id": 60,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "750:15:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Property_$12_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct RealEstateMP.Property storage ref) returns (uint256)"
+                      }
+                    },
+                    "id": 62,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "750:28:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 63,
+                  "nodeType": "ExpressionStatement",
+                  "src": "750:28:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 65,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "788:18:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "id": 64,
+                      "name": "propertiesLength",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 26,
+                      "src": "788:16:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 66,
+                  "nodeType": "ExpressionStatement",
+                  "src": "788:18:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 71,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "816:34:0",
+                    "subExpression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
+                        "argumentTypes": null,
+                        "id": 67,
+                        "name": "ownerPropertiesCount",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 36,
+                        "src": "816:20:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
+                          "typeString": "mapping(address => uint256)"
+                        }
+                      },
+                      "id": 70,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "expression": {
+                          "argumentTypes": null,
+                          "id": 68,
+                          "name": "msg",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 162,
+                          "src": "837:3:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_message",
+                            "typeString": "msg"
+                          }
+                        },
+                        "id": 69,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberName": "sender",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": null,
+                        "src": "837:10:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "nodeType": "IndexAccess",
+                      "src": "816:32:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 72,
+                  "nodeType": "ExpressionStatement",
+                  "src": "816:34:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 74,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createProperty",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 45,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 38,
+                  "name": "_localisation",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "545:20:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string calldata"
+                  },
+                  "typeName": {
+                    "id": 37,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "545:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 40,
+                  "name": "_area",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "567:10:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
                   "typeDescriptions": {
                     "typeIdentifier": "t_uint256",
                     "typeString": "uint256"
-                  }
+                  },
+                  "typeName": {
+                    "id": 39,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "567:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 42,
+                  "name": "_description",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "579:19:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_calldata_ptr",
+                    "typeString": "string calldata"
+                  },
+                  "typeName": {
+                    "id": 41,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "579:6:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string storage pointer"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 44,
+                  "name": "_chamberCount",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 74,
+                  "src": "600:18:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 43,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "600:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
                 }
-              },
-              "value": null,
-              "visibility": "public"
+              ],
+              "src": "544:75:0"
             },
-            {
-              "body": {
-                "id": 125,
-                "nodeType": "Block",
-                "src": "595:200:1",
-                "statements": [
-                  {
-                    "assignments": [
-                      103
-                    ],
-                    "declarations": [
-                      {
-                        "constant": false,
-                        "id": 103,
-                        "name": "newProperty",
-                        "nodeType": "VariableDeclaration",
-                        "scope": 126,
-                        "src": "605:27:1",
-                        "stateVariable": false,
-                        "storageLocation": "memory",
+            "payable": false,
+            "returnParameters": {
+              "id": 46,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "629:0:0"
+            },
+            "scope": 149,
+            "src": "521:336:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "958:138:0",
+              "statements": [
+                {
+                  "assignments": [
+                    86
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 86,
+                      "name": "newSale",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 104,
+                      "src": "968:19:0",
+                      "stateVariable": false,
+                      "storageLocation": "memory",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Sale_$21_memory_ptr",
+                        "typeString": "struct RealEstateMP.Sale memory"
+                      },
+                      "typeName": {
+                        "contractScope": null,
+                        "id": 85,
+                        "name": "Sale",
+                        "nodeType": "UserDefinedTypeName",
+                        "referencedDeclaration": 21,
+                        "src": "968:4:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Property_$69_memory_ptr",
-                          "typeString": "struct RealEstateMP.Property memory"
-                        },
-                        "typeName": {
-                          "contractScope": null,
-                          "id": 102,
-                          "name": "Property",
-                          "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 69,
-                          "src": "605:8:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Property_$69_storage_ptr",
-                            "typeString": "struct RealEstateMP.Property storage pointer"
-                          }
-                        },
-                        "value": null,
-                        "visibility": "internal"
-                      }
-                    ],
-                    "id": 112,
-                    "initialValue": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 105,
-                          "name": "_localisation",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 93,
-                          "src": "644:13:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_calldata_ptr",
-                            "typeString": "string calldata"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 106,
-                          "name": "_area",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 95,
-                          "src": "659:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 107,
-                          "name": "_description",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 97,
-                          "src": "666:12:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_string_calldata_ptr",
-                            "typeString": "string calldata"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 108,
-                          "name": "_chamberCount",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 99,
-                          "src": "680:13:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 109,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 214,
-                            "src": "695:3:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 110,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "memberName": "sender",
-                          "nodeType": "MemberAccess",
-                          "referencedDeclaration": null,
-                          "src": "695:10:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
+                          "typeIdentifier": "t_struct$_Sale_$21_storage_ptr",
+                          "typeString": "struct RealEstateMP.Sale storage pointer"
                         }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_string_calldata_ptr",
-                            "typeString": "string calldata"
-                          },
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          {
-                            "typeIdentifier": "t_string_calldata_ptr",
-                            "typeString": "string calldata"
-                          },
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        ],
-                        "id": 104,
-                        "name": "Property",
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 93,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 88,
+                        "name": "_price",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 69,
-                        "src": "635:8:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Property_$69_storage_ptr_$",
-                          "typeString": "type(struct RealEstateMP.Property storage pointer)"
-                        }
-                      },
-                      "id": 111,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "structConstructorCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "635:71:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Property_$69_memory",
-                        "typeString": "struct RealEstateMP.Property memory"
-                      }
-                    },
-                    "nodeType": "VariableDeclarationStatement",
-                    "src": "605:101:1"
-                  },
-                  {
-                    "expression": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 116,
-                          "name": "newProperty",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 103,
-                          "src": "732:11:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Property_$69_memory_ptr",
-                            "typeString": "struct RealEstateMP.Property memory"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_struct$_Property_$69_memory_ptr",
-                            "typeString": "struct RealEstateMP.Property memory"
-                          }
-                        ],
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 113,
-                          "name": "properties",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 81,
-                          "src": "716:10:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Property_$69_storage_$dyn_storage",
-                            "typeString": "struct RealEstateMP.Property storage ref[] storage ref"
-                          }
-                        },
-                        "id": 115,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "memberName": "push",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "716:15:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Property_$69_storage_$returns$_t_uint256_$",
-                          "typeString": "function (struct RealEstateMP.Property storage ref) returns (uint256)"
-                        }
-                      },
-                      "id": 117,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "functionCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "716:28:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "id": 118,
-                    "nodeType": "ExpressionStatement",
-                    "src": "716:28:1"
-                  },
-                  {
-                    "expression": {
-                      "argumentTypes": null,
-                      "id": 123,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "nodeType": "UnaryOperation",
-                      "operator": "++",
-                      "prefix": false,
-                      "src": "754:34:1",
-                      "subExpression": {
-                        "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 119,
-                          "name": "ownerPropertiesCount",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 91,
-                          "src": "754:20:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_mapping$_t_address_$_t_uint256_$",
-                            "typeString": "mapping(address => uint256)"
-                          }
-                        },
-                        "id": 122,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "expression": {
-                            "argumentTypes": null,
-                            "id": 120,
-                            "name": "msg",
-                            "nodeType": "Identifier",
-                            "overloadedDeclarations": [],
-                            "referencedDeclaration": 214,
-                            "src": "775:3:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_magic_message",
-                              "typeString": "msg"
-                            }
-                          },
-                          "id": 121,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "memberName": "sender",
-                          "nodeType": "MemberAccess",
-                          "referencedDeclaration": null,
-                          "src": "775:10:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        },
-                        "isConstant": false,
-                        "isLValue": true,
-                        "isPure": false,
-                        "lValueRequested": true,
-                        "nodeType": "IndexAccess",
-                        "src": "754:32:1",
+                        "referencedDeclaration": 76,
+                        "src": "995:6:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "id": 124,
-                    "nodeType": "ExpressionStatement",
-                    "src": "754:34:1"
-                  }
-                ]
-              },
-              "documentation": null,
-              "id": 126,
-              "implemented": true,
-              "isConstructor": false,
-              "isDeclaredConst": false,
-              "modifiers": [],
-              "name": "createProperty",
-              "nodeType": "FunctionDefinition",
-              "parameters": {
-                "id": 100,
-                "nodeType": "ParameterList",
-                "parameters": [
-                  {
-                    "constant": false,
-                    "id": 93,
-                    "name": "_localisation",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 126,
-                    "src": "511:20:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_calldata_ptr",
-                      "typeString": "string calldata"
-                    },
-                    "typeName": {
-                      "id": 92,
-                      "name": "string",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "511:6:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_string_storage_ptr",
-                        "typeString": "string storage pointer"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  {
-                    "constant": false,
-                    "id": 95,
-                    "name": "_area",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 126,
-                    "src": "533:10:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "typeName": {
-                      "id": 94,
-                      "name": "uint",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "533:4:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  {
-                    "constant": false,
-                    "id": 97,
-                    "name": "_description",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 126,
-                    "src": "545:19:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_string_calldata_ptr",
-                      "typeString": "string calldata"
-                    },
-                    "typeName": {
-                      "id": 96,
-                      "name": "string",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "545:6:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_string_storage_ptr",
-                        "typeString": "string storage pointer"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  {
-                    "constant": false,
-                    "id": 99,
-                    "name": "_chamberCount",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 126,
-                    "src": "566:18:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "typeName": {
-                      "id": 98,
-                      "name": "uint",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "566:4:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  }
-                ],
-                "src": "510:75:1"
-              },
-              "payable": false,
-              "returnParameters": {
-                "id": 101,
-                "nodeType": "ParameterList",
-                "parameters": [],
-                "src": "595:0:1"
-              },
-              "scope": 201,
-              "src": "487:308:1",
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "external"
-            },
-            {
-              "body": {
-                "id": 155,
-                "nodeType": "Block",
-                "src": "896:138:1",
-                "statements": [
-                  {
-                    "assignments": [
-                      138
-                    ],
-                    "declarations": [
                       {
-                        "constant": false,
-                        "id": 138,
-                        "name": "newSale",
-                        "nodeType": "VariableDeclaration",
-                        "scope": 156,
-                        "src": "906:19:1",
-                        "stateVariable": false,
-                        "storageLocation": "memory",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Sale_$78_memory_ptr",
-                          "typeString": "struct RealEstateMP.Sale memory"
-                        },
-                        "typeName": {
-                          "contractScope": null,
-                          "id": 137,
-                          "name": "Sale",
-                          "nodeType": "UserDefinedTypeName",
-                          "referencedDeclaration": 78,
-                          "src": "906:4:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Sale_$78_storage_ptr",
-                            "typeString": "struct RealEstateMP.Sale storage pointer"
-                          }
-                        },
-                        "value": null,
-                        "visibility": "internal"
-                      }
-                    ],
-                    "id": 145,
-                    "initialValue": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 140,
-                          "name": "_price",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 128,
-                          "src": "933:6:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 141,
-                          "name": "_sellerId",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 130,
-                          "src": "941:9:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 142,
-                          "name": "_saleDate",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 132,
-                          "src": "952:9:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        {
-                          "argumentTypes": null,
-                          "id": 143,
-                          "name": "_propertyId",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 134,
-                          "src": "963:11:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
-                          },
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        ],
-                        "id": 139,
-                        "name": "Sale",
+                        "argumentTypes": null,
+                        "id": 89,
+                        "name": "_sellerId",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
                         "referencedDeclaration": 78,
-                        "src": "928:4:1",
+                        "src": "1003:9:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_type$_t_struct$_Sale_$78_storage_ptr_$",
-                          "typeString": "type(struct RealEstateMP.Sale storage pointer)"
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
                         }
                       },
-                      "id": 144,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "structConstructorCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "928:47:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_struct$_Sale_$78_memory",
-                        "typeString": "struct RealEstateMP.Sale memory"
-                      }
-                    },
-                    "nodeType": "VariableDeclarationStatement",
-                    "src": "906:69:1"
-                  },
-                  {
-                    "expression": {
-                      "argumentTypes": null,
-                      "arguments": [
-                        {
-                          "argumentTypes": null,
-                          "id": 149,
-                          "name": "newSale",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 138,
-                          "src": "996:7:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Sale_$78_memory_ptr",
-                            "typeString": "struct RealEstateMP.Sale memory"
-                          }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_struct$_Sale_$78_memory_ptr",
-                            "typeString": "struct RealEstateMP.Sale memory"
-                          }
-                        ],
-                        "expression": {
-                          "argumentTypes": null,
-                          "id": 146,
-                          "name": "sales",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 84,
-                          "src": "985:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Sale_$78_storage_$dyn_storage",
-                            "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
-                          }
-                        },
-                        "id": 148,
-                        "isConstant": false,
-                        "isLValue": false,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "memberName": "push",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "985:10:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Sale_$78_storage_$returns$_t_uint256_$",
-                          "typeString": "function (struct RealEstateMP.Sale storage ref) returns (uint256)"
-                        }
-                      },
-                      "id": 150,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "functionCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "985:19:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "id": 151,
-                    "nodeType": "ExpressionStatement",
-                    "src": "985:19:1"
-                  },
-                  {
-                    "expression": {
-                      "argumentTypes": null,
-                      "id": 153,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "nodeType": "UnaryOperation",
-                      "operator": "++",
-                      "prefix": false,
-                      "src": "1014:13:1",
-                      "subExpression": {
+                      {
                         "argumentTypes": null,
-                        "id": 152,
-                        "name": "salesLength",
+                        "id": 90,
+                        "name": "_saleDate",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 87,
-                        "src": "1014:11:1",
+                        "referencedDeclaration": 80,
+                        "src": "1014:9:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
                         }
                       },
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
+                      {
+                        "argumentTypes": null,
+                        "id": 91,
+                        "name": "_propertyId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 82,
+                        "src": "1025:11:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
                       }
-                    },
-                    "id": 154,
-                    "nodeType": "ExpressionStatement",
-                    "src": "1014:13:1"
-                  }
-                ]
-              },
-              "documentation": null,
-              "id": 156,
-              "implemented": true,
-              "isConstructor": false,
-              "isDeclaredConst": false,
-              "modifiers": [],
-              "name": "createSale",
-              "nodeType": "FunctionDefinition",
-              "parameters": {
-                "id": 135,
-                "nodeType": "ParameterList",
-                "parameters": [
-                  {
-                    "constant": false,
-                    "id": 128,
-                    "name": "_price",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 156,
-                    "src": "821:11:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "typeName": {
-                      "id": 127,
-                      "name": "uint",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "821:4:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  {
-                    "constant": false,
-                    "id": 130,
-                    "name": "_sellerId",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 156,
-                    "src": "834:17:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_address",
-                      "typeString": "address"
-                    },
-                    "typeName": {
-                      "id": 129,
-                      "name": "address",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "834:7:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_address",
-                        "typeString": "address"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  {
-                    "constant": false,
-                    "id": 132,
-                    "name": "_saleDate",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 156,
-                    "src": "853:14:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "typeName": {
-                      "id": 131,
-                      "name": "uint",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "853:4:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  {
-                    "constant": false,
-                    "id": 134,
-                    "name": "_propertyId",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 156,
-                    "src": "869:16:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "typeDescriptions": {
-                      "typeIdentifier": "t_uint256",
-                      "typeString": "uint256"
-                    },
-                    "typeName": {
-                      "id": 133,
-                      "name": "uint",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "869:4:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
-                  }
-                ],
-                "src": "820:66:1"
-              },
-              "payable": false,
-              "returnParameters": {
-                "id": 136,
-                "nodeType": "ParameterList",
-                "parameters": [],
-                "src": "896:0:1"
-              },
-              "scope": 201,
-              "src": "801:233:1",
-              "stateMutability": "nonpayable",
-              "superFunction": null,
-              "visibility": "external"
-            },
-            {
-              "body": {
-                "id": 199,
-                "nodeType": "Block",
-                "src": "1084:236:1",
-                "statements": [
-                  {
+                    ],
                     "expression": {
-                      "argumentTypes": null,
-                      "arguments": [
+                      "argumentTypes": [
                         {
-                          "argumentTypes": null,
-                          "commonType": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          },
-                          "id": 170,
-                          "isConstant": false,
-                          "isLValue": false,
-                          "isPure": false,
-                          "lValueRequested": false,
-                          "leftExpression": {
-                            "argumentTypes": null,
-                            "arguments": [
-                              {
-                                "argumentTypes": null,
-                                "expression": {
-                                  "argumentTypes": null,
-                                  "id": 163,
-                                  "name": "msg",
-                                  "nodeType": "Identifier",
-                                  "overloadedDeclarations": [],
-                                  "referencedDeclaration": 214,
-                                  "src": "1107:3:1",
-                                  "typeDescriptions": {
-                                    "typeIdentifier": "t_magic_message",
-                                    "typeString": "msg"
-                                  }
-                                },
-                                "id": 164,
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "memberName": "value",
-                                "nodeType": "MemberAccess",
-                                "referencedDeclaration": null,
-                                "src": "1107:9:1",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_uint256",
-                                  "typeString": "uint256"
-                                }
-                              }
-                            ],
-                            "expression": {
-                              "argumentTypes": [
-                                {
-                                  "typeIdentifier": "t_uint256",
-                                  "typeString": "uint256"
-                                }
-                              ],
-                              "id": 162,
-                              "isConstant": false,
-                              "isLValue": false,
-                              "isPure": true,
-                              "lValueRequested": false,
-                              "nodeType": "ElementaryTypeNameExpression",
-                              "src": "1102:4:1",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_type$_t_uint256_$",
-                                "typeString": "type(uint256)"
-                              },
-                              "typeName": "uint"
-                            },
-                            "id": 165,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "kind": "typeConversion",
-                            "lValueRequested": false,
-                            "names": [],
-                            "nodeType": "FunctionCall",
-                            "src": "1102:15:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "nodeType": "BinaryOperation",
-                          "operator": ">=",
-                          "rightExpression": {
-                            "argumentTypes": null,
-                            "expression": {
-                              "argumentTypes": null,
-                              "baseExpression": {
-                                "argumentTypes": null,
-                                "id": 166,
-                                "name": "sales",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 84,
-                                "src": "1121:5:1",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_array$_t_struct$_Sale_$78_storage_$dyn_storage",
-                                  "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
-                                }
-                              },
-                              "id": 168,
-                              "indexExpression": {
-                                "argumentTypes": null,
-                                "id": 167,
-                                "name": "_saleId",
-                                "nodeType": "Identifier",
-                                "overloadedDeclarations": [],
-                                "referencedDeclaration": 158,
-                                "src": "1127:7:1",
-                                "typeDescriptions": {
-                                  "typeIdentifier": "t_uint256",
-                                  "typeString": "uint256"
-                                }
-                              },
-                              "isConstant": false,
-                              "isLValue": true,
-                              "isPure": false,
-                              "lValueRequested": false,
-                              "nodeType": "IndexAccess",
-                              "src": "1121:14:1",
-                              "typeDescriptions": {
-                                "typeIdentifier": "t_struct$_Sale_$78_storage",
-                                "typeString": "struct RealEstateMP.Sale storage ref"
-                              }
-                            },
-                            "id": 169,
-                            "isConstant": false,
-                            "isLValue": true,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "memberName": "price",
-                            "nodeType": "MemberAccess",
-                            "referencedDeclaration": 71,
-                            "src": "1121:20:1",
-                            "typeDescriptions": {
-                              "typeIdentifier": "t_uint256",
-                              "typeString": "uint256"
-                            }
-                          },
-                          "src": "1102:39:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          }
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "id": 87,
+                      "name": "Sale",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 21,
+                      "src": "990:4:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_struct$_Sale_$21_storage_ptr_$",
+                        "typeString": "type(struct RealEstateMP.Sale storage pointer)"
+                      }
+                    },
+                    "id": 92,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "structConstructorCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "990:47:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_Sale_$21_memory",
+                      "typeString": "struct RealEstateMP.Sale memory"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "968:69:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "id": 97,
+                        "name": "newSale",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 86,
+                        "src": "1058:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_struct$_Sale_$21_memory_ptr",
+                          "typeString": "struct RealEstateMP.Sale memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_struct$_Sale_$21_memory_ptr",
+                          "typeString": "struct RealEstateMP.Sale memory"
                         }
                       ],
                       "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_bool",
-                            "typeString": "bool"
-                          }
-                        ],
-                        "id": 161,
-                        "name": "require",
+                        "argumentTypes": null,
+                        "id": 94,
+                        "name": "sales",
                         "nodeType": "Identifier",
                         "overloadedDeclarations": [],
-                        "referencedDeclaration": 217,
-                        "src": "1094:7:1",
+                        "referencedDeclaration": 29,
+                        "src": "1047:5:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
-                          "typeString": "function (bool) pure"
+                          "typeIdentifier": "t_array$_t_struct$_Sale_$21_storage_$dyn_storage",
+                          "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
                         }
                       },
-                      "id": 171,
+                      "id": 96,
                       "isConstant": false,
                       "isLValue": false,
                       "isPure": false,
-                      "kind": "functionCall",
                       "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "1094:48:1",
+                      "memberName": "push",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1047:10:0",
                       "typeDescriptions": {
-                        "typeIdentifier": "t_tuple$__$",
-                        "typeString": "tuple()"
+                        "typeIdentifier": "t_function_arraypush_nonpayable$_t_struct$_Sale_$21_storage_$returns$_t_uint256_$",
+                        "typeString": "function (struct RealEstateMP.Sale storage ref) returns (uint256)"
                       }
                     },
-                    "id": 172,
-                    "nodeType": "ExpressionStatement",
-                    "src": "1094:48:1"
+                    "id": 98,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1047:19:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
                   },
-                  {
-                    "expression": {
+                  "id": 99,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1047:19:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 101,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "nodeType": "UnaryOperation",
+                    "operator": "++",
+                    "prefix": false,
+                    "src": "1076:13:0",
+                    "subExpression": {
                       "argumentTypes": null,
-                      "arguments": [
-                        {
+                      "id": 100,
+                      "name": "salesLength",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 32,
+                      "src": "1076:11:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      }
+                    },
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "id": 102,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1076:13:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "createSale",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 83,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 76,
+                  "name": "_price",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "883:11:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 75,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "883:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 78,
+                  "name": "_sellerId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "896:17:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 77,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "896:7:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 80,
+                  "name": "_saleDate",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "915:14:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 79,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "915:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 82,
+                  "name": "_propertyId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 104,
+                  "src": "931:16:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 81,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "931:4:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "882:66:0"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 84,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "958:0:0"
+            },
+            "scope": 149,
+            "src": "863:233:0",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "external"
+          },
+          {
+            "body": {
+              "id": 147,
+              "nodeType": "Block",
+              "src": "1146:236:0",
+              "statements": [
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "commonType": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        },
+                        "id": 118,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "leftExpression": {
                           "argumentTypes": null,
                           "arguments": [
                             {
                               "argumentTypes": null,
                               "expression": {
                                 "argumentTypes": null,
-                                "id": 179,
+                                "id": 111,
                                 "name": "msg",
                                 "nodeType": "Identifier",
                                 "overloadedDeclarations": [],
-                                "referencedDeclaration": 214,
-                                "src": "1190:3:1",
+                                "referencedDeclaration": 162,
+                                "src": "1169:3:0",
                                 "typeDescriptions": {
                                   "typeIdentifier": "t_magic_message",
                                   "typeString": "msg"
                                 }
                               },
-                              "id": 180,
+                              "id": 112,
                               "isConstant": false,
                               "isLValue": false,
                               "isPure": false,
@@ -1687,7 +1589,7 @@ export const ABI = {
                               "memberName": "value",
                               "nodeType": "MemberAccess",
                               "referencedDeclaration": null,
-                              "src": "1190:9:1",
+                              "src": "1169:9:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1701,20 +1603,20 @@ export const ABI = {
                                 "typeString": "uint256"
                               }
                             ],
-                            "id": 178,
+                            "id": 110,
                             "isConstant": false,
                             "isLValue": false,
                             "isPure": true,
                             "lValueRequested": false,
                             "nodeType": "ElementaryTypeNameExpression",
-                            "src": "1185:4:1",
+                            "src": "1164:4:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_type$_t_uint256_$",
                               "typeString": "type(uint256)"
                             },
                             "typeName": "uint"
                           },
-                          "id": 181,
+                          "id": 113,
                           "isConstant": false,
                           "isLValue": false,
                           "isPure": false,
@@ -1722,46 +1624,40 @@ export const ABI = {
                           "lValueRequested": false,
                           "names": [],
                           "nodeType": "FunctionCall",
-                          "src": "1185:15:1",
+                          "src": "1164:15:0",
                           "typeDescriptions": {
                             "typeIdentifier": "t_uint256",
                             "typeString": "uint256"
                           }
-                        }
-                      ],
-                      "expression": {
-                        "argumentTypes": [
-                          {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        ],
-                        "expression": {
+                        },
+                        "nodeType": "BinaryOperation",
+                        "operator": ">=",
+                        "rightExpression": {
                           "argumentTypes": null,
                           "expression": {
                             "argumentTypes": null,
                             "baseExpression": {
                               "argumentTypes": null,
-                              "id": 173,
+                              "id": 114,
                               "name": "sales",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 84,
-                              "src": "1152:5:1",
+                              "referencedDeclaration": 29,
+                              "src": "1183:5:0",
                               "typeDescriptions": {
-                                "typeIdentifier": "t_array$_t_struct$_Sale_$78_storage_$dyn_storage",
+                                "typeIdentifier": "t_array$_t_struct$_Sale_$21_storage_$dyn_storage",
                                 "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
                               }
                             },
-                            "id": 175,
+                            "id": 116,
                             "indexExpression": {
                               "argumentTypes": null,
-                              "id": 174,
+                              "id": 115,
                               "name": "_saleId",
                               "nodeType": "Identifier",
                               "overloadedDeclarations": [],
-                              "referencedDeclaration": 158,
-                              "src": "1158:7:1",
+                              "referencedDeclaration": 106,
+                              "src": "1189:7:0",
                               "typeDescriptions": {
                                 "typeIdentifier": "t_uint256",
                                 "typeString": "uint256"
@@ -1772,184 +1668,174 @@ export const ABI = {
                             "isPure": false,
                             "lValueRequested": false,
                             "nodeType": "IndexAccess",
-                            "src": "1152:14:1",
+                            "src": "1183:14:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_struct$_Sale_$78_storage",
+                              "typeIdentifier": "t_struct$_Sale_$21_storage",
                               "typeString": "struct RealEstateMP.Sale storage ref"
                             }
                           },
-                          "id": 176,
+                          "id": 117,
                           "isConstant": false,
                           "isLValue": true,
                           "isPure": false,
                           "lValueRequested": false,
-                          "memberName": "sellerId",
+                          "memberName": "price",
                           "nodeType": "MemberAccess",
-                          "referencedDeclaration": 73,
-                          "src": "1152:23:1",
+                          "referencedDeclaration": 14,
+                          "src": "1183:20:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_address",
-                            "typeString": "address"
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
                           }
                         },
-                        "id": 177,
+                        "src": "1164:39:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_bool",
+                          "typeString": "bool"
+                        }
+                      ],
+                      "id": 109,
+                      "name": "require",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 165,
+                      "src": "1156:7:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_require_pure$_t_bool_$returns$__$",
+                        "typeString": "function (bool) pure"
+                      }
+                    },
+                    "id": 119,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1156:48:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 120,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1156:48:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "arguments": [
+                      {
+                        "argumentTypes": null,
+                        "arguments": [
+                          {
+                            "argumentTypes": null,
+                            "expression": {
+                              "argumentTypes": null,
+                              "id": 127,
+                              "name": "msg",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 162,
+                              "src": "1252:3:0",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_magic_message",
+                                "typeString": "msg"
+                              }
+                            },
+                            "id": 128,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": false,
+                            "lValueRequested": false,
+                            "memberName": "value",
+                            "nodeType": "MemberAccess",
+                            "referencedDeclaration": null,
+                            "src": "1252:9:0",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_uint256",
+                              "typeString": "uint256"
+                            }
+                          ],
+                          "id": 126,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1247:4:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_uint256_$",
+                            "typeString": "type(uint256)"
+                          },
+                          "typeName": "uint"
+                        },
+                        "id": 129,
                         "isConstant": false,
                         "isLValue": false,
                         "isPure": false,
+                        "kind": "typeConversion",
                         "lValueRequested": false,
-                        "memberName": "transfer",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "1152:32:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
-                          "typeString": "function (uint256)"
-                        }
-                      },
-                      "id": 182,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "kind": "functionCall",
-                      "lValueRequested": false,
-                      "names": [],
-                      "nodeType": "FunctionCall",
-                      "src": "1152:49:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_tuple$__$",
-                        "typeString": "tuple()"
-                      }
-                    },
-                    "id": 183,
-                    "nodeType": "ExpressionStatement",
-                    "src": "1152:49:1"
-                  },
-                  {
-                    "assignments": [
-                      185
-                    ],
-                    "declarations": [
-                      {
-                        "constant": false,
-                        "id": 185,
-                        "name": "propertySelled",
-                        "nodeType": "VariableDeclaration",
-                        "scope": 200,
-                        "src": "1211:19:1",
-                        "stateVariable": false,
-                        "storageLocation": "default",
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1247:15:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_uint256",
                           "typeString": "uint256"
-                        },
-                        "typeName": {
-                          "id": 184,
-                          "name": "uint",
-                          "nodeType": "ElementaryTypeName",
-                          "src": "1211:4:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "value": null,
-                        "visibility": "internal"
+                        }
                       }
                     ],
-                    "id": 190,
-                    "initialValue": {
-                      "argumentTypes": null,
-                      "expression": {
-                        "argumentTypes": null,
-                        "baseExpression": {
-                          "argumentTypes": null,
-                          "id": 186,
-                          "name": "sales",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 84,
-                          "src": "1233:5:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_array$_t_struct$_Sale_$78_storage_$dyn_storage",
-                            "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
-                          }
-                        },
-                        "id": 188,
-                        "indexExpression": {
-                          "argumentTypes": null,
-                          "id": 187,
-                          "name": "_saleId",
-                          "nodeType": "Identifier",
-                          "overloadedDeclarations": [],
-                          "referencedDeclaration": 158,
-                          "src": "1239:7:1",
-                          "typeDescriptions": {
-                            "typeIdentifier": "t_uint256",
-                            "typeString": "uint256"
-                          }
-                        },
-                        "isConstant": false,
-                        "isLValue": true,
-                        "isPure": false,
-                        "lValueRequested": false,
-                        "nodeType": "IndexAccess",
-                        "src": "1233:14:1",
-                        "typeDescriptions": {
-                          "typeIdentifier": "t_struct$_Sale_$78_storage",
-                          "typeString": "struct RealEstateMP.Sale storage ref"
-                        }
-                      },
-                      "id": 189,
-                      "isConstant": false,
-                      "isLValue": true,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "memberName": "propertyId",
-                      "nodeType": "MemberAccess",
-                      "referencedDeclaration": 77,
-                      "src": "1233:25:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "nodeType": "VariableDeclarationStatement",
-                    "src": "1211:47:1"
-                  },
-                  {
                     "expression": {
-                      "argumentTypes": null,
-                      "id": 197,
-                      "isConstant": false,
-                      "isLValue": false,
-                      "isPure": false,
-                      "lValueRequested": false,
-                      "leftHandSide": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      ],
+                      "expression": {
                         "argumentTypes": null,
                         "expression": {
                           "argumentTypes": null,
                           "baseExpression": {
                             "argumentTypes": null,
-                            "id": 191,
-                            "name": "properties",
+                            "id": 121,
+                            "name": "sales",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 81,
-                            "src": "1268:10:1",
+                            "referencedDeclaration": 29,
+                            "src": "1214:5:0",
                             "typeDescriptions": {
-                              "typeIdentifier": "t_array$_t_struct$_Property_$69_storage_$dyn_storage",
-                              "typeString": "struct RealEstateMP.Property storage ref[] storage ref"
+                              "typeIdentifier": "t_array$_t_struct$_Sale_$21_storage_$dyn_storage",
+                              "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
                             }
                           },
-                          "id": 193,
+                          "id": 123,
                           "indexExpression": {
                             "argumentTypes": null,
-                            "id": 192,
-                            "name": "propertySelled",
+                            "id": 122,
+                            "name": "_saleId",
                             "nodeType": "Identifier",
                             "overloadedDeclarations": [],
-                            "referencedDeclaration": 185,
-                            "src": "1279:14:1",
+                            "referencedDeclaration": 106,
+                            "src": "1220:7:0",
                             "typeDescriptions": {
                               "typeIdentifier": "t_uint256",
                               "typeString": "uint256"
@@ -1960,2184 +1846,2444 @@ export const ABI = {
                           "isPure": false,
                           "lValueRequested": false,
                           "nodeType": "IndexAccess",
-                          "src": "1268:26:1",
+                          "src": "1214:14:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_struct$_Property_$69_storage",
-                            "typeString": "struct RealEstateMP.Property storage ref"
+                            "typeIdentifier": "t_struct$_Sale_$21_storage",
+                            "typeString": "struct RealEstateMP.Sale storage ref"
                           }
                         },
-                        "id": 194,
+                        "id": 124,
                         "isConstant": false,
                         "isLValue": true,
                         "isPure": false,
-                        "lValueRequested": true,
-                        "memberName": "owner",
+                        "lValueRequested": false,
+                        "memberName": "sellerId",
                         "nodeType": "MemberAccess",
-                        "referencedDeclaration": 68,
-                        "src": "1268:32:1",
+                        "referencedDeclaration": 16,
+                        "src": "1214:23:0",
                         "typeDescriptions": {
                           "typeIdentifier": "t_address",
                           "typeString": "address"
                         }
                       },
-                      "nodeType": "Assignment",
-                      "operator": "=",
-                      "rightHandSide": {
+                      "id": 125,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "transfer",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1214:32:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_transfer_nonpayable$_t_uint256_$returns$__$",
+                        "typeString": "function (uint256)"
+                      }
+                    },
+                    "id": 130,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1214:49:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 131,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1214:49:0"
+                },
+                {
+                  "assignments": [
+                    133
+                  ],
+                  "declarations": [
+                    {
+                      "constant": false,
+                      "id": 133,
+                      "name": "propertySelled",
+                      "nodeType": "VariableDeclaration",
+                      "scope": 148,
+                      "src": "1273:19:0",
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_uint256",
+                        "typeString": "uint256"
+                      },
+                      "typeName": {
+                        "id": 132,
+                        "name": "uint",
+                        "nodeType": "ElementaryTypeName",
+                        "src": "1273:4:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "value": null,
+                      "visibility": "internal"
+                    }
+                  ],
+                  "id": 138,
+                  "initialValue": {
+                    "argumentTypes": null,
+                    "expression": {
+                      "argumentTypes": null,
+                      "baseExpression": {
                         "argumentTypes": null,
-                        "expression": {
+                        "id": 134,
+                        "name": "sales",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 29,
+                        "src": "1295:5:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_array$_t_struct$_Sale_$21_storage_$dyn_storage",
+                          "typeString": "struct RealEstateMP.Sale storage ref[] storage ref"
+                        }
+                      },
+                      "id": 136,
+                      "indexExpression": {
+                        "argumentTypes": null,
+                        "id": 135,
+                        "name": "_saleId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 106,
+                        "src": "1301:7:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_uint256",
+                          "typeString": "uint256"
+                        }
+                      },
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "IndexAccess",
+                      "src": "1295:14:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_Sale_$21_storage",
+                        "typeString": "struct RealEstateMP.Sale storage ref"
+                      }
+                    },
+                    "id": 137,
+                    "isConstant": false,
+                    "isLValue": true,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "memberName": "propertyId",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 20,
+                    "src": "1295:25:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "nodeType": "VariableDeclarationStatement",
+                  "src": "1273:47:0"
+                },
+                {
+                  "expression": {
+                    "argumentTypes": null,
+                    "id": 145,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "baseExpression": {
                           "argumentTypes": null,
-                          "id": 195,
-                          "name": "msg",
+                          "id": 139,
+                          "name": "properties",
                           "nodeType": "Identifier",
                           "overloadedDeclarations": [],
-                          "referencedDeclaration": 214,
-                          "src": "1303:3:1",
+                          "referencedDeclaration": 24,
+                          "src": "1330:10:0",
                           "typeDescriptions": {
-                            "typeIdentifier": "t_magic_message",
-                            "typeString": "msg"
+                            "typeIdentifier": "t_array$_t_struct$_Property_$12_storage_$dyn_storage",
+                            "typeString": "struct RealEstateMP.Property storage ref[] storage ref"
                           }
                         },
-                        "id": 196,
+                        "id": 141,
+                        "indexExpression": {
+                          "argumentTypes": null,
+                          "id": 140,
+                          "name": "propertySelled",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 133,
+                          "src": "1341:14:0",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                          }
+                        },
                         "isConstant": false,
-                        "isLValue": false,
+                        "isLValue": true,
                         "isPure": false,
                         "lValueRequested": false,
-                        "memberName": "sender",
-                        "nodeType": "MemberAccess",
-                        "referencedDeclaration": null,
-                        "src": "1303:10:1",
+                        "nodeType": "IndexAccess",
+                        "src": "1330:26:0",
                         "typeDescriptions": {
-                          "typeIdentifier": "t_address",
-                          "typeString": "address"
+                          "typeIdentifier": "t_struct$_Property_$12_storage",
+                          "typeString": "struct RealEstateMP.Property storage ref"
                         }
                       },
-                      "src": "1268:45:1",
+                      "id": 142,
+                      "isConstant": false,
+                      "isLValue": true,
+                      "isPure": false,
+                      "lValueRequested": true,
+                      "memberName": "owner",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": 11,
+                      "src": "1330:32:0",
                       "typeDescriptions": {
                         "typeIdentifier": "t_address",
                         "typeString": "address"
                       }
                     },
-                    "id": 198,
-                    "nodeType": "ExpressionStatement",
-                    "src": "1268:45:1"
-                  }
-                ]
-              },
-              "documentation": null,
-              "id": 200,
-              "implemented": true,
-              "isConstructor": false,
-              "isDeclaredConst": false,
-              "modifiers": [],
-              "name": "buy",
-              "nodeType": "FunctionDefinition",
-              "parameters": {
-                "id": 159,
-                "nodeType": "ParameterList",
-                "parameters": [
-                  {
-                    "constant": false,
-                    "id": 158,
-                    "name": "_saleId",
-                    "nodeType": "VariableDeclaration",
-                    "scope": 200,
-                    "src": "1053:12:1",
-                    "stateVariable": false,
-                    "storageLocation": "default",
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "argumentTypes": null,
+                      "expression": {
+                        "argumentTypes": null,
+                        "id": 143,
+                        "name": "msg",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 162,
+                        "src": "1365:3:0",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_magic_message",
+                          "typeString": "msg"
+                        }
+                      },
+                      "id": 144,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "memberName": "sender",
+                      "nodeType": "MemberAccess",
+                      "referencedDeclaration": null,
+                      "src": "1365:10:0",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_address",
+                        "typeString": "address"
+                      }
+                    },
+                    "src": "1330:45:0",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 146,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1330:45:0"
+                }
+              ]
+            },
+            "documentation": null,
+            "id": 148,
+            "implemented": true,
+            "isConstructor": false,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "buy",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 107,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 106,
+                  "name": "_saleId",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 148,
+                  "src": "1115:12:0",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 105,
+                    "name": "uint",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1115:4:0",
                     "typeDescriptions": {
                       "typeIdentifier": "t_uint256",
                       "typeString": "uint256"
+                    }
+                  },
+                  "value": null,
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1114:14:0"
+            },
+            "payable": true,
+            "returnParameters": {
+              "id": 108,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1146:0:0"
+            },
+            "scope": 149,
+            "src": "1102:280:0",
+            "stateMutability": "payable",
+            "superFunction": null,
+            "visibility": "external"
+          }
+        ],
+        "scope": 150,
+        "src": "26:1358:0"
+      }
+    ],
+    "src": "0:1410:0"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "project:/contracts/RealEstateMP.sol",
+      "exportedSymbols": {
+        "RealEstateMP": [
+          149
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            "^",
+            "0.4",
+            ".21"
+          ]
+        },
+        "id": 1,
+        "name": "PragmaDirective",
+        "src": "0:24:0"
+      },
+      {
+        "attributes": {
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            149
+          ],
+          "name": "RealEstateMP",
+          "scope": 150
+        },
+        "children": [
+          {
+            "attributes": {
+              "canonicalName": "RealEstateMP.Property",
+              "name": "Property",
+              "scope": 149,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "localisation",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
                     },
-                    "typeName": {
-                      "id": 157,
-                      "name": "uint",
-                      "nodeType": "ElementaryTypeName",
-                      "src": "1053:4:1",
-                      "typeDescriptions": {
-                        "typeIdentifier": "t_uint256",
-                        "typeString": "uint256"
-                      }
-                    },
-                    "value": null,
-                    "visibility": "internal"
+                    "id": 2,
+                    "name": "ElementaryTypeName",
+                    "src": "81:6:0"
                   }
                 ],
-                "src": "1052:14:1"
+                "id": 3,
+                "name": "VariableDeclaration",
+                "src": "81:19:0"
               },
-              "payable": true,
-              "returnParameters": {
-                "id": 160,
-                "nodeType": "ParameterList",
-                "parameters": [],
-                "src": "1084:0:1"
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "area",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 4,
+                    "name": "ElementaryTypeName",
+                    "src": "110:4:0"
+                  }
+                ],
+                "id": 5,
+                "name": "VariableDeclaration",
+                "src": "110:9:0"
               },
-              "scope": 201,
-              "src": "1040:280:1",
-              "stateMutability": "payable",
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "description",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "string storage pointer",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "string",
+                      "type": "string storage pointer"
+                    },
+                    "id": 6,
+                    "name": "ElementaryTypeName",
+                    "src": "129:6:0"
+                  }
+                ],
+                "id": 7,
+                "name": "VariableDeclaration",
+                "src": "129:18:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "chamberCount",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 8,
+                    "name": "ElementaryTypeName",
+                    "src": "157:4:0"
+                  }
+                ],
+                "id": 9,
+                "name": "VariableDeclaration",
+                "src": "157:17:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "owner",
+                  "scope": 12,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 10,
+                    "name": "ElementaryTypeName",
+                    "src": "184:7:0"
+                  }
+                ],
+                "id": 11,
+                "name": "VariableDeclaration",
+                "src": "184:13:0"
+              }
+            ],
+            "id": 12,
+            "name": "StructDefinition",
+            "src": "55:149:0"
+          },
+          {
+            "attributes": {
+              "canonicalName": "RealEstateMP.Sale",
+              "name": "Sale",
+              "scope": 149,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "price",
+                  "scope": 21,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 13,
+                    "name": "ElementaryTypeName",
+                    "src": "232:4:0"
+                  }
+                ],
+                "id": 14,
+                "name": "VariableDeclaration",
+                "src": "232:10:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "sellerId",
+                  "scope": 21,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "address",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 15,
+                    "name": "ElementaryTypeName",
+                    "src": "252:7:0"
+                  }
+                ],
+                "id": 16,
+                "name": "VariableDeclaration",
+                "src": "252:16:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "saleDate",
+                  "scope": 21,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 17,
+                    "name": "ElementaryTypeName",
+                    "src": "278:4:0"
+                  }
+                ],
+                "id": 18,
+                "name": "VariableDeclaration",
+                "src": "278:13:0"
+              },
+              {
+                "attributes": {
+                  "constant": false,
+                  "name": "propertyId",
+                  "scope": 21,
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "type": "uint256",
+                  "value": null,
+                  "visibility": "internal"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 19,
+                    "name": "ElementaryTypeName",
+                    "src": "301:4:0"
+                  }
+                ],
+                "id": 20,
+                "name": "VariableDeclaration",
+                "src": "301:15:0"
+              }
+            ],
+            "id": 21,
+            "name": "StructDefinition",
+            "src": "210:113:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "properties",
+              "scope": 149,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct RealEstateMP.Property storage ref[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct RealEstateMP.Property storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Property",
+                      "referencedDeclaration": 12,
+                      "type": "struct RealEstateMP.Property storage pointer"
+                    },
+                    "id": 22,
+                    "name": "UserDefinedTypeName",
+                    "src": "330:8:0"
+                  }
+                ],
+                "id": 23,
+                "name": "ArrayTypeName",
+                "src": "330:10:0"
+              }
+            ],
+            "id": 24,
+            "name": "VariableDeclaration",
+            "src": "330:28:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "propertiesLength",
+              "scope": 149,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 25,
+                "name": "ElementaryTypeName",
+                "src": "364:4:0"
+              }
+            ],
+            "id": 26,
+            "name": "VariableDeclaration",
+            "src": "364:28:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "sales",
+              "scope": 149,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "struct RealEstateMP.Sale storage ref[] storage ref",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "length": null,
+                  "type": "struct RealEstateMP.Sale storage ref[] storage pointer"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "contractScope": null,
+                      "name": "Sale",
+                      "referencedDeclaration": 21,
+                      "type": "struct RealEstateMP.Sale storage pointer"
+                    },
+                    "id": 27,
+                    "name": "UserDefinedTypeName",
+                    "src": "398:4:0"
+                  }
+                ],
+                "id": 28,
+                "name": "ArrayTypeName",
+                "src": "398:6:0"
+              }
+            ],
+            "id": 29,
+            "name": "VariableDeclaration",
+            "src": "398:19:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "salesLength",
+              "scope": 149,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "uint256",
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "name": "uint",
+                  "type": "uint256"
+                },
+                "id": 30,
+                "name": "ElementaryTypeName",
+                "src": "423:4:0"
+              },
+              {
+                "attributes": {
+                  "argumentTypes": null,
+                  "hexvalue": "30",
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "subdenomination": null,
+                  "token": "number",
+                  "type": "int_const 0",
+                  "value": "0"
+                },
+                "id": 31,
+                "name": "Literal",
+                "src": "449:1:0"
+              }
+            ],
+            "id": 32,
+            "name": "VariableDeclaration",
+            "src": "423:27:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "name": "ownerPropertiesCount",
+              "scope": 149,
+              "stateVariable": true,
+              "storageLocation": "default",
+              "type": "mapping(address => uint256)",
+              "value": null,
+              "visibility": "public"
+            },
+            "children": [
+              {
+                "attributes": {
+                  "type": "mapping(address => uint256)"
+                },
+                "children": [
+                  {
+                    "attributes": {
+                      "name": "address",
+                      "type": "address"
+                    },
+                    "id": 33,
+                    "name": "ElementaryTypeName",
+                    "src": "466:7:0"
+                  },
+                  {
+                    "attributes": {
+                      "name": "uint",
+                      "type": "uint256"
+                    },
+                    "id": 34,
+                    "name": "ElementaryTypeName",
+                    "src": "477:4:0"
+                  }
+                ],
+                "id": 35,
+                "name": "Mapping",
+                "src": "457:25:0"
+              }
+            ],
+            "id": 36,
+            "name": "VariableDeclaration",
+            "src": "457:53:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "createProperty",
+              "payable": false,
+              "scope": 149,
+              "stateMutability": "nonpayable",
               "superFunction": null,
               "visibility": "external"
-            }
-          ],
-          "scope": 202,
-          "src": "26:1296:1"
-        }
-      ],
-      "src": "0:1322:1"
-    },
-    "legacyAST": {
-      "attributes": {
-        "absolutePath": "project:/contracts/RealEstateMP.sol",
-        "exportedSymbols": {
-          "RealEstateMP": [
-            201
-          ]
-        }
-      },
-      "children": [
-        {
-          "attributes": {
-            "literals": [
-              "solidity",
-              "^",
-              "0.4",
-              ".21"
-            ]
-          },
-          "id": 58,
-          "name": "PragmaDirective",
-          "src": "0:24:1"
-        },
-        {
-          "attributes": {
-            "baseContracts": [
-              null
-            ],
-            "contractDependencies": [
-              null
-            ],
-            "contractKind": "contract",
-            "documentation": null,
-            "fullyImplemented": true,
-            "linearizedBaseContracts": [
-              201
-            ],
-            "name": "RealEstateMP",
-            "scope": 202
-          },
-          "children": [
-            {
-              "attributes": {
-                "canonicalName": "RealEstateMP.Property",
-                "name": "Property",
-                "scope": 201,
-                "visibility": "public"
-              },
-              "children": [
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "localisation",
-                    "scope": 69,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "string storage pointer",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "string",
-                        "type": "string storage pointer"
-                      },
-                      "id": 59,
-                      "name": "ElementaryTypeName",
-                      "src": "81:6:1"
-                    }
-                  ],
-                  "id": 60,
-                  "name": "VariableDeclaration",
-                  "src": "81:19:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "area",
-                    "scope": 69,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "uint256",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "uint",
-                        "type": "uint256"
-                      },
-                      "id": 61,
-                      "name": "ElementaryTypeName",
-                      "src": "110:4:1"
-                    }
-                  ],
-                  "id": 62,
-                  "name": "VariableDeclaration",
-                  "src": "110:9:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "description",
-                    "scope": 69,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "string storage pointer",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "string",
-                        "type": "string storage pointer"
-                      },
-                      "id": 63,
-                      "name": "ElementaryTypeName",
-                      "src": "129:6:1"
-                    }
-                  ],
-                  "id": 64,
-                  "name": "VariableDeclaration",
-                  "src": "129:18:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "chamberCount",
-                    "scope": 69,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "uint256",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "uint",
-                        "type": "uint256"
-                      },
-                      "id": 65,
-                      "name": "ElementaryTypeName",
-                      "src": "157:4:1"
-                    }
-                  ],
-                  "id": 66,
-                  "name": "VariableDeclaration",
-                  "src": "157:17:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "owner",
-                    "scope": 69,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "address",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "address",
-                        "type": "address"
-                      },
-                      "id": 67,
-                      "name": "ElementaryTypeName",
-                      "src": "184:7:1"
-                    }
-                  ],
-                  "id": 68,
-                  "name": "VariableDeclaration",
-                  "src": "184:13:1"
-                }
-              ],
-              "id": 69,
-              "name": "StructDefinition",
-              "src": "55:149:1"
             },
-            {
-              "attributes": {
-                "canonicalName": "RealEstateMP.Sale",
-                "name": "Sale",
-                "scope": 201,
-                "visibility": "public"
-              },
-              "children": [
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "price",
-                    "scope": 78,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "uint256",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "uint",
-                        "type": "uint256"
-                      },
-                      "id": 70,
-                      "name": "ElementaryTypeName",
-                      "src": "232:4:1"
-                    }
-                  ],
-                  "id": 71,
-                  "name": "VariableDeclaration",
-                  "src": "232:10:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "sellerId",
-                    "scope": 78,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "address",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "address",
-                        "type": "address"
-                      },
-                      "id": 72,
-                      "name": "ElementaryTypeName",
-                      "src": "252:7:1"
-                    }
-                  ],
-                  "id": 73,
-                  "name": "VariableDeclaration",
-                  "src": "252:16:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "saleDate",
-                    "scope": 78,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "uint256",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "uint",
-                        "type": "uint256"
-                      },
-                      "id": 74,
-                      "name": "ElementaryTypeName",
-                      "src": "278:4:1"
-                    }
-                  ],
-                  "id": 75,
-                  "name": "VariableDeclaration",
-                  "src": "278:13:1"
-                },
-                {
-                  "attributes": {
-                    "constant": false,
-                    "name": "propertyId",
-                    "scope": 78,
-                    "stateVariable": false,
-                    "storageLocation": "default",
-                    "type": "uint256",
-                    "value": null,
-                    "visibility": "internal"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "uint",
-                        "type": "uint256"
-                      },
-                      "id": 76,
-                      "name": "ElementaryTypeName",
-                      "src": "301:4:1"
-                    }
-                  ],
-                  "id": 77,
-                  "name": "VariableDeclaration",
-                  "src": "301:15:1"
-                }
-              ],
-              "id": 78,
-              "name": "StructDefinition",
-              "src": "210:113:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "name": "properties",
-                "scope": 201,
-                "stateVariable": true,
-                "storageLocation": "default",
-                "type": "struct RealEstateMP.Property storage ref[] storage ref",
-                "value": null,
-                "visibility": "public"
-              },
-              "children": [
-                {
-                  "attributes": {
-                    "length": null,
-                    "type": "struct RealEstateMP.Property storage ref[] storage pointer"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "contractScope": null,
-                        "name": "Property",
-                        "referencedDeclaration": 69,
-                        "type": "struct RealEstateMP.Property storage pointer"
-                      },
-                      "id": 79,
-                      "name": "UserDefinedTypeName",
-                      "src": "330:8:1"
-                    }
-                  ],
-                  "id": 80,
-                  "name": "ArrayTypeName",
-                  "src": "330:10:1"
-                }
-              ],
-              "id": 81,
-              "name": "VariableDeclaration",
-              "src": "330:28:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "name": "sales",
-                "scope": 201,
-                "stateVariable": true,
-                "storageLocation": "default",
-                "type": "struct RealEstateMP.Sale storage ref[] storage ref",
-                "value": null,
-                "visibility": "public"
-              },
-              "children": [
-                {
-                  "attributes": {
-                    "length": null,
-                    "type": "struct RealEstateMP.Sale storage ref[] storage pointer"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "contractScope": null,
-                        "name": "Sale",
-                        "referencedDeclaration": 78,
-                        "type": "struct RealEstateMP.Sale storage pointer"
-                      },
-                      "id": 82,
-                      "name": "UserDefinedTypeName",
-                      "src": "364:4:1"
-                    }
-                  ],
-                  "id": 83,
-                  "name": "ArrayTypeName",
-                  "src": "364:6:1"
-                }
-              ],
-              "id": 84,
-              "name": "VariableDeclaration",
-              "src": "364:19:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "name": "salesLength",
-                "scope": 201,
-                "stateVariable": true,
-                "storageLocation": "default",
-                "type": "uint256",
-                "visibility": "public"
-              },
-              "children": [
-                {
-                  "attributes": {
-                    "name": "uint",
-                    "type": "uint256"
-                  },
-                  "id": 85,
-                  "name": "ElementaryTypeName",
-                  "src": "389:4:1"
-                },
-                {
-                  "attributes": {
-                    "argumentTypes": null,
-                    "hexvalue": "30",
-                    "isConstant": false,
-                    "isLValue": false,
-                    "isPure": true,
-                    "lValueRequested": false,
-                    "subdenomination": null,
-                    "token": "number",
-                    "type": "int_const 0",
-                    "value": "0"
-                  },
-                  "id": 86,
-                  "name": "Literal",
-                  "src": "415:1:1"
-                }
-              ],
-              "id": 87,
-              "name": "VariableDeclaration",
-              "src": "389:27:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "name": "ownerPropertiesCount",
-                "scope": 201,
-                "stateVariable": true,
-                "storageLocation": "default",
-                "type": "mapping(address => uint256)",
-                "value": null,
-                "visibility": "public"
-              },
-              "children": [
-                {
-                  "attributes": {
-                    "type": "mapping(address => uint256)"
-                  },
-                  "children": [
-                    {
-                      "attributes": {
-                        "name": "address",
-                        "type": "address"
-                      },
-                      "id": 88,
-                      "name": "ElementaryTypeName",
-                      "src": "432:7:1"
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_localisation",
+                      "scope": 74,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string calldata",
+                      "value": null,
+                      "visibility": "internal"
                     },
-                    {
-                      "attributes": {
-                        "name": "uint",
-                        "type": "uint256"
-                      },
-                      "id": 89,
-                      "name": "ElementaryTypeName",
-                      "src": "443:4:1"
-                    }
-                  ],
-                  "id": 90,
-                  "name": "Mapping",
-                  "src": "423:25:1"
-                }
-              ],
-              "id": 91,
-              "name": "VariableDeclaration",
-              "src": "423:53:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "documentation": null,
-                "implemented": true,
-                "isConstructor": false,
-                "modifiers": [
-                  null
-                ],
-                "name": "createProperty",
-                "payable": false,
-                "scope": 201,
-                "stateMutability": "nonpayable",
-                "superFunction": null,
-                "visibility": "external"
-              },
-              "children": [
-                {
-                  "children": [
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_localisation",
-                        "scope": 126,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "string calldata",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "string",
-                            "type": "string storage pointer"
-                          },
-                          "id": 92,
-                          "name": "ElementaryTypeName",
-                          "src": "511:6:1"
-                        }
-                      ],
-                      "id": 93,
-                      "name": "VariableDeclaration",
-                      "src": "511:20:1"
-                    },
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_area",
-                        "scope": 126,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "uint256",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "uint",
-                            "type": "uint256"
-                          },
-                          "id": 94,
-                          "name": "ElementaryTypeName",
-                          "src": "533:4:1"
-                        }
-                      ],
-                      "id": 95,
-                      "name": "VariableDeclaration",
-                      "src": "533:10:1"
-                    },
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_description",
-                        "scope": 126,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "string calldata",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "string",
-                            "type": "string storage pointer"
-                          },
-                          "id": 96,
-                          "name": "ElementaryTypeName",
-                          "src": "545:6:1"
-                        }
-                      ],
-                      "id": 97,
-                      "name": "VariableDeclaration",
-                      "src": "545:19:1"
-                    },
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_chamberCount",
-                        "scope": 126,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "uint256",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "uint",
-                            "type": "uint256"
-                          },
-                          "id": 98,
-                          "name": "ElementaryTypeName",
-                          "src": "566:4:1"
-                        }
-                      ],
-                      "id": 99,
-                      "name": "VariableDeclaration",
-                      "src": "566:18:1"
-                    }
-                  ],
-                  "id": 100,
-                  "name": "ParameterList",
-                  "src": "510:75:1"
-                },
-                {
-                  "attributes": {
-                    "parameters": [
-                      null
-                    ]
-                  },
-                  "children": [],
-                  "id": 101,
-                  "name": "ParameterList",
-                  "src": "595:0:1"
-                },
-                {
-                  "children": [
-                    {
-                      "attributes": {
-                        "assignments": [
-                          103
-                        ]
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "constant": false,
-                            "name": "newProperty",
-                            "scope": 126,
-                            "stateVariable": false,
-                            "storageLocation": "memory",
-                            "type": "struct RealEstateMP.Property memory",
-                            "value": null,
-                            "visibility": "internal"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "contractScope": null,
-                                "name": "Property",
-                                "referencedDeclaration": 69,
-                                "type": "struct RealEstateMP.Property storage pointer"
-                              },
-                              "id": 102,
-                              "name": "UserDefinedTypeName",
-                              "src": "605:8:1"
-                            }
-                          ],
-                          "id": 103,
-                          "name": "VariableDeclaration",
-                          "src": "605:27:1"
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
                         },
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "isStructConstructorCall": true,
-                            "lValueRequested": false,
-                            "names": [
-                              null
-                            ],
-                            "type": "struct RealEstateMP.Property memory",
-                            "type_conversion": false
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": [
-                                  {
-                                    "typeIdentifier": "t_string_calldata_ptr",
-                                    "typeString": "string calldata"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_uint256",
-                                    "typeString": "uint256"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_string_calldata_ptr",
-                                    "typeString": "string calldata"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_uint256",
-                                    "typeString": "uint256"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_address",
-                                    "typeString": "address"
-                                  }
-                                ],
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 69,
-                                "type": "type(struct RealEstateMP.Property storage pointer)",
-                                "value": "Property"
-                              },
-                              "id": 104,
-                              "name": "Identifier",
-                              "src": "635:8:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 93,
-                                "type": "string calldata",
-                                "value": "_localisation"
-                              },
-                              "id": 105,
-                              "name": "Identifier",
-                              "src": "644:13:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 95,
-                                "type": "uint256",
-                                "value": "_area"
-                              },
-                              "id": 106,
-                              "name": "Identifier",
-                              "src": "659:5:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 97,
-                                "type": "string calldata",
-                                "value": "_description"
-                              },
-                              "id": 107,
-                              "name": "Identifier",
-                              "src": "666:12:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 99,
-                                "type": "uint256",
-                                "value": "_chamberCount"
-                              },
-                              "id": 108,
-                              "name": "Identifier",
-                              "src": "680:13:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "member_name": "sender",
-                                "referencedDeclaration": null,
-                                "type": "address"
-                              },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 214,
-                                    "type": "msg",
-                                    "value": "msg"
-                                  },
-                                  "id": 109,
-                                  "name": "Identifier",
-                                  "src": "695:3:1"
-                                }
-                              ],
-                              "id": 110,
-                              "name": "MemberAccess",
-                              "src": "695:10:1"
-                            }
-                          ],
-                          "id": 111,
-                          "name": "FunctionCall",
-                          "src": "635:71:1"
-                        }
-                      ],
-                      "id": 112,
-                      "name": "VariableDeclarationStatement",
-                      "src": "605:101:1"
+                        "id": 37,
+                        "name": "ElementaryTypeName",
+                        "src": "545:6:0"
+                      }
+                    ],
+                    "id": 38,
+                    "name": "VariableDeclaration",
+                    "src": "545:20:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_area",
+                      "scope": 74,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
                     },
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "isStructConstructorCall": false,
-                            "lValueRequested": false,
-                            "names": [
-                              null
-                            ],
-                            "type": "uint256",
-                            "type_conversion": false
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": [
-                                  {
-                                    "typeIdentifier": "t_struct$_Property_$69_memory_ptr",
-                                    "typeString": "struct RealEstateMP.Property memory"
-                                  }
-                                ],
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "member_name": "push",
-                                "referencedDeclaration": null,
-                                "type": "function (struct RealEstateMP.Property storage ref) returns (uint256)"
-                              },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 81,
-                                    "type": "struct RealEstateMP.Property storage ref[] storage ref",
-                                    "value": "properties"
-                                  },
-                                  "id": 113,
-                                  "name": "Identifier",
-                                  "src": "716:10:1"
-                                }
-                              ],
-                              "id": 115,
-                              "name": "MemberAccess",
-                              "src": "716:15:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 103,
-                                "type": "struct RealEstateMP.Property memory",
-                                "value": "newProperty"
-                              },
-                              "id": 116,
-                              "name": "Identifier",
-                              "src": "732:11:1"
-                            }
-                          ],
-                          "id": 117,
-                          "name": "FunctionCall",
-                          "src": "716:28:1"
-                        }
-                      ],
-                      "id": 118,
-                      "name": "ExpressionStatement",
-                      "src": "716:28:1"
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 39,
+                        "name": "ElementaryTypeName",
+                        "src": "567:4:0"
+                      }
+                    ],
+                    "id": 40,
+                    "name": "VariableDeclaration",
+                    "src": "567:10:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_description",
+                      "scope": 74,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "string calldata",
+                      "value": null,
+                      "visibility": "internal"
                     },
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "operator": "++",
-                            "prefix": false,
-                            "type": "uint256"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "isConstant": false,
-                                "isLValue": true,
-                                "isPure": false,
-                                "lValueRequested": true,
-                                "type": "uint256"
-                              },
-                              "children": [
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "string",
+                          "type": "string storage pointer"
+                        },
+                        "id": 41,
+                        "name": "ElementaryTypeName",
+                        "src": "579:6:0"
+                      }
+                    ],
+                    "id": 42,
+                    "name": "VariableDeclaration",
+                    "src": "579:19:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_chamberCount",
+                      "scope": 74,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 43,
+                        "name": "ElementaryTypeName",
+                        "src": "600:4:0"
+                      }
+                    ],
+                    "id": 44,
+                    "name": "VariableDeclaration",
+                    "src": "600:18:0"
+                  }
+                ],
+                "id": 45,
+                "name": "ParameterList",
+                "src": "544:75:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 46,
+                "name": "ParameterList",
+                "src": "629:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        48
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newProperty",
+                          "scope": 74,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct RealEstateMP.Property memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Property",
+                              "referencedDeclaration": 12,
+                              "type": "struct RealEstateMP.Property storage pointer"
+                            },
+                            "id": 47,
+                            "name": "UserDefinedTypeName",
+                            "src": "639:8:0"
+                          }
+                        ],
+                        "id": 48,
+                        "name": "VariableDeclaration",
+                        "src": "639:27:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "struct RealEstateMP.Property memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
                                 {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 91,
-                                    "type": "mapping(address => uint256)",
-                                    "value": "ownerPropertiesCount"
-                                  },
-                                  "id": 119,
-                                  "name": "Identifier",
-                                  "src": "754:20:1"
+                                  "typeIdentifier": "t_string_calldata_ptr",
+                                  "typeString": "string calldata"
                                 },
                                 {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "isConstant": false,
-                                    "isLValue": false,
-                                    "isPure": false,
-                                    "lValueRequested": false,
-                                    "member_name": "sender",
-                                    "referencedDeclaration": null,
-                                    "type": "address"
-                                  },
-                                  "children": [
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "overloadedDeclarations": [
-                                          null
-                                        ],
-                                        "referencedDeclaration": 214,
-                                        "type": "msg",
-                                        "value": "msg"
-                                      },
-                                      "id": 120,
-                                      "name": "Identifier",
-                                      "src": "775:3:1"
-                                    }
-                                  ],
-                                  "id": 121,
-                                  "name": "MemberAccess",
-                                  "src": "775:10:1"
-                                }
-                              ],
-                              "id": 122,
-                              "name": "IndexAccess",
-                              "src": "754:32:1"
-                            }
-                          ],
-                          "id": 123,
-                          "name": "UnaryOperation",
-                          "src": "754:34:1"
-                        }
-                      ],
-                      "id": 124,
-                      "name": "ExpressionStatement",
-                      "src": "754:34:1"
-                    }
-                  ],
-                  "id": 125,
-                  "name": "Block",
-                  "src": "595:200:1"
-                }
-              ],
-              "id": 126,
-              "name": "FunctionDefinition",
-              "src": "487:308:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "documentation": null,
-                "implemented": true,
-                "isConstructor": false,
-                "modifiers": [
-                  null
-                ],
-                "name": "createSale",
-                "payable": false,
-                "scope": 201,
-                "stateMutability": "nonpayable",
-                "superFunction": null,
-                "visibility": "external"
-              },
-              "children": [
-                {
-                  "children": [
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_price",
-                        "scope": 156,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "uint256",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "uint",
-                            "type": "uint256"
-                          },
-                          "id": 127,
-                          "name": "ElementaryTypeName",
-                          "src": "821:4:1"
-                        }
-                      ],
-                      "id": 128,
-                      "name": "VariableDeclaration",
-                      "src": "821:11:1"
-                    },
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_sellerId",
-                        "scope": 156,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "address",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "address",
-                            "type": "address"
-                          },
-                          "id": 129,
-                          "name": "ElementaryTypeName",
-                          "src": "834:7:1"
-                        }
-                      ],
-                      "id": 130,
-                      "name": "VariableDeclaration",
-                      "src": "834:17:1"
-                    },
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_saleDate",
-                        "scope": 156,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "uint256",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "uint",
-                            "type": "uint256"
-                          },
-                          "id": 131,
-                          "name": "ElementaryTypeName",
-                          "src": "853:4:1"
-                        }
-                      ],
-                      "id": 132,
-                      "name": "VariableDeclaration",
-                      "src": "853:14:1"
-                    },
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_propertyId",
-                        "scope": 156,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "uint256",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "uint",
-                            "type": "uint256"
-                          },
-                          "id": 133,
-                          "name": "ElementaryTypeName",
-                          "src": "869:4:1"
-                        }
-                      ],
-                      "id": 134,
-                      "name": "VariableDeclaration",
-                      "src": "869:16:1"
-                    }
-                  ],
-                  "id": 135,
-                  "name": "ParameterList",
-                  "src": "820:66:1"
-                },
-                {
-                  "attributes": {
-                    "parameters": [
-                      null
-                    ]
-                  },
-                  "children": [],
-                  "id": 136,
-                  "name": "ParameterList",
-                  "src": "896:0:1"
-                },
-                {
-                  "children": [
-                    {
-                      "attributes": {
-                        "assignments": [
-                          138
-                        ]
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "constant": false,
-                            "name": "newSale",
-                            "scope": 156,
-                            "stateVariable": false,
-                            "storageLocation": "memory",
-                            "type": "struct RealEstateMP.Sale memory",
-                            "value": null,
-                            "visibility": "internal"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "contractScope": null,
-                                "name": "Sale",
-                                "referencedDeclaration": 78,
-                                "type": "struct RealEstateMP.Sale storage pointer"
-                              },
-                              "id": 137,
-                              "name": "UserDefinedTypeName",
-                              "src": "906:4:1"
-                            }
-                          ],
-                          "id": 138,
-                          "name": "VariableDeclaration",
-                          "src": "906:19:1"
-                        },
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "isStructConstructorCall": true,
-                            "lValueRequested": false,
-                            "names": [
-                              null
-                            ],
-                            "type": "struct RealEstateMP.Sale memory",
-                            "type_conversion": false
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": [
-                                  {
-                                    "typeIdentifier": "t_uint256",
-                                    "typeString": "uint256"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_address",
-                                    "typeString": "address"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_uint256",
-                                    "typeString": "uint256"
-                                  },
-                                  {
-                                    "typeIdentifier": "t_uint256",
-                                    "typeString": "uint256"
-                                  }
-                                ],
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 78,
-                                "type": "type(struct RealEstateMP.Sale storage pointer)",
-                                "value": "Sale"
-                              },
-                              "id": 139,
-                              "name": "Identifier",
-                              "src": "928:4:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 128,
-                                "type": "uint256",
-                                "value": "_price"
-                              },
-                              "id": 140,
-                              "name": "Identifier",
-                              "src": "933:6:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 130,
-                                "type": "address",
-                                "value": "_sellerId"
-                              },
-                              "id": 141,
-                              "name": "Identifier",
-                              "src": "941:9:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 132,
-                                "type": "uint256",
-                                "value": "_saleDate"
-                              },
-                              "id": 142,
-                              "name": "Identifier",
-                              "src": "952:9:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 134,
-                                "type": "uint256",
-                                "value": "_propertyId"
-                              },
-                              "id": 143,
-                              "name": "Identifier",
-                              "src": "963:11:1"
-                            }
-                          ],
-                          "id": 144,
-                          "name": "FunctionCall",
-                          "src": "928:47:1"
-                        }
-                      ],
-                      "id": 145,
-                      "name": "VariableDeclarationStatement",
-                      "src": "906:69:1"
-                    },
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "isStructConstructorCall": false,
-                            "lValueRequested": false,
-                            "names": [
-                              null
-                            ],
-                            "type": "uint256",
-                            "type_conversion": false
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": [
-                                  {
-                                    "typeIdentifier": "t_struct$_Sale_$78_memory_ptr",
-                                    "typeString": "struct RealEstateMP.Sale memory"
-                                  }
-                                ],
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "member_name": "push",
-                                "referencedDeclaration": null,
-                                "type": "function (struct RealEstateMP.Sale storage ref) returns (uint256)"
-                              },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 84,
-                                    "type": "struct RealEstateMP.Sale storage ref[] storage ref",
-                                    "value": "sales"
-                                  },
-                                  "id": 146,
-                                  "name": "Identifier",
-                                  "src": "985:5:1"
-                                }
-                              ],
-                              "id": 148,
-                              "name": "MemberAccess",
-                              "src": "985:10:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 138,
-                                "type": "struct RealEstateMP.Sale memory",
-                                "value": "newSale"
-                              },
-                              "id": 149,
-                              "name": "Identifier",
-                              "src": "996:7:1"
-                            }
-                          ],
-                          "id": 150,
-                          "name": "FunctionCall",
-                          "src": "985:19:1"
-                        }
-                      ],
-                      "id": 151,
-                      "name": "ExpressionStatement",
-                      "src": "985:19:1"
-                    },
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "operator": "++",
-                            "prefix": false,
-                            "type": "uint256"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 87,
-                                "type": "uint256",
-                                "value": "salesLength"
-                              },
-                              "id": 152,
-                              "name": "Identifier",
-                              "src": "1014:11:1"
-                            }
-                          ],
-                          "id": 153,
-                          "name": "UnaryOperation",
-                          "src": "1014:13:1"
-                        }
-                      ],
-                      "id": 154,
-                      "name": "ExpressionStatement",
-                      "src": "1014:13:1"
-                    }
-                  ],
-                  "id": 155,
-                  "name": "Block",
-                  "src": "896:138:1"
-                }
-              ],
-              "id": 156,
-              "name": "FunctionDefinition",
-              "src": "801:233:1"
-            },
-            {
-              "attributes": {
-                "constant": false,
-                "documentation": null,
-                "implemented": true,
-                "isConstructor": false,
-                "modifiers": [
-                  null
-                ],
-                "name": "buy",
-                "payable": true,
-                "scope": 201,
-                "stateMutability": "payable",
-                "superFunction": null,
-                "visibility": "external"
-              },
-              "children": [
-                {
-                  "children": [
-                    {
-                      "attributes": {
-                        "constant": false,
-                        "name": "_saleId",
-                        "scope": 200,
-                        "stateVariable": false,
-                        "storageLocation": "default",
-                        "type": "uint256",
-                        "value": null,
-                        "visibility": "internal"
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "name": "uint",
-                            "type": "uint256"
-                          },
-                          "id": 157,
-                          "name": "ElementaryTypeName",
-                          "src": "1053:4:1"
-                        }
-                      ],
-                      "id": 158,
-                      "name": "VariableDeclaration",
-                      "src": "1053:12:1"
-                    }
-                  ],
-                  "id": 159,
-                  "name": "ParameterList",
-                  "src": "1052:14:1"
-                },
-                {
-                  "attributes": {
-                    "parameters": [
-                      null
-                    ]
-                  },
-                  "children": [],
-                  "id": 160,
-                  "name": "ParameterList",
-                  "src": "1084:0:1"
-                },
-                {
-                  "children": [
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "isStructConstructorCall": false,
-                            "lValueRequested": false,
-                            "names": [
-                              null
-                            ],
-                            "type": "tuple()",
-                            "type_conversion": false
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": [
-                                  {
-                                    "typeIdentifier": "t_bool",
-                                    "typeString": "bool"
-                                  }
-                                ],
-                                "overloadedDeclarations": [
-                                  null
-                                ],
-                                "referencedDeclaration": 217,
-                                "type": "function (bool) pure",
-                                "value": "require"
-                              },
-                              "id": 161,
-                              "name": "Identifier",
-                              "src": "1094:7:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "commonType": {
                                   "typeIdentifier": "t_uint256",
                                   "typeString": "uint256"
                                 },
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "operator": ">=",
-                                "type": "bool"
-                              },
-                              "children": [
                                 {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "isConstant": false,
-                                    "isLValue": false,
-                                    "isPure": false,
-                                    "isStructConstructorCall": false,
-                                    "lValueRequested": false,
-                                    "names": [
-                                      null
-                                    ],
-                                    "type": "uint256",
-                                    "type_conversion": true
-                                  },
-                                  "children": [
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": [
-                                          {
-                                            "typeIdentifier": "t_uint256",
-                                            "typeString": "uint256"
-                                          }
-                                        ],
-                                        "isConstant": false,
-                                        "isLValue": false,
-                                        "isPure": true,
-                                        "lValueRequested": false,
-                                        "type": "type(uint256)",
-                                        "value": "uint"
-                                      },
-                                      "id": 162,
-                                      "name": "ElementaryTypeNameExpression",
-                                      "src": "1102:4:1"
-                                    },
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "isConstant": false,
-                                        "isLValue": false,
-                                        "isPure": false,
-                                        "lValueRequested": false,
-                                        "member_name": "value",
-                                        "referencedDeclaration": null,
-                                        "type": "uint256"
-                                      },
-                                      "children": [
-                                        {
-                                          "attributes": {
-                                            "argumentTypes": null,
-                                            "overloadedDeclarations": [
-                                              null
-                                            ],
-                                            "referencedDeclaration": 214,
-                                            "type": "msg",
-                                            "value": "msg"
-                                          },
-                                          "id": 163,
-                                          "name": "Identifier",
-                                          "src": "1107:3:1"
-                                        }
-                                      ],
-                                      "id": 164,
-                                      "name": "MemberAccess",
-                                      "src": "1107:9:1"
-                                    }
-                                  ],
-                                  "id": 165,
-                                  "name": "FunctionCall",
-                                  "src": "1102:15:1"
+                                  "typeIdentifier": "t_string_calldata_ptr",
+                                  "typeString": "string calldata"
                                 },
                                 {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "isConstant": false,
-                                    "isLValue": true,
-                                    "isPure": false,
-                                    "lValueRequested": false,
-                                    "member_name": "price",
-                                    "referencedDeclaration": 71,
-                                    "type": "uint256"
-                                  },
-                                  "children": [
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "isConstant": false,
-                                        "isLValue": true,
-                                        "isPure": false,
-                                        "lValueRequested": false,
-                                        "type": "struct RealEstateMP.Sale storage ref"
-                                      },
-                                      "children": [
-                                        {
-                                          "attributes": {
-                                            "argumentTypes": null,
-                                            "overloadedDeclarations": [
-                                              null
-                                            ],
-                                            "referencedDeclaration": 84,
-                                            "type": "struct RealEstateMP.Sale storage ref[] storage ref",
-                                            "value": "sales"
-                                          },
-                                          "id": 166,
-                                          "name": "Identifier",
-                                          "src": "1121:5:1"
-                                        },
-                                        {
-                                          "attributes": {
-                                            "argumentTypes": null,
-                                            "overloadedDeclarations": [
-                                              null
-                                            ],
-                                            "referencedDeclaration": 158,
-                                            "type": "uint256",
-                                            "value": "_saleId"
-                                          },
-                                          "id": 167,
-                                          "name": "Identifier",
-                                          "src": "1127:7:1"
-                                        }
-                                      ],
-                                      "id": 168,
-                                      "name": "IndexAccess",
-                                      "src": "1121:14:1"
-                                    }
-                                  ],
-                                  "id": 169,
-                                  "name": "MemberAccess",
-                                  "src": "1121:20:1"
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
                                 }
                               ],
-                              "id": 170,
-                              "name": "BinaryOperation",
-                              "src": "1102:39:1"
-                            }
-                          ],
-                          "id": 171,
-                          "name": "FunctionCall",
-                          "src": "1094:48:1"
-                        }
-                      ],
-                      "id": 172,
-                      "name": "ExpressionStatement",
-                      "src": "1094:48:1"
-                    },
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "isStructConstructorCall": false,
-                            "lValueRequested": false,
-                            "names": [
-                              null
-                            ],
-                            "type": "tuple()",
-                            "type_conversion": false
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 12,
+                              "type": "type(struct RealEstateMP.Property storage pointer)",
+                              "value": "Property"
+                            },
+                            "id": 49,
+                            "name": "Identifier",
+                            "src": "669:8:0"
                           },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 38,
+                              "type": "string calldata",
+                              "value": "_localisation"
+                            },
+                            "id": 50,
+                            "name": "Identifier",
+                            "src": "678:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 40,
+                              "type": "uint256",
+                              "value": "_area"
+                            },
+                            "id": 51,
+                            "name": "Identifier",
+                            "src": "693:5:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 42,
+                              "type": "string calldata",
+                              "value": "_description"
+                            },
+                            "id": 52,
+                            "name": "Identifier",
+                            "src": "700:12:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 44,
+                              "type": "uint256",
+                              "value": "_chamberCount"
+                            },
+                            "id": 53,
+                            "name": "Identifier",
+                            "src": "714:13:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 162,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 54,
+                                "name": "Identifier",
+                                "src": "729:3:0"
+                              }
+                            ],
+                            "id": 55,
+                            "name": "MemberAccess",
+                            "src": "729:10:0"
+                          }
+                        ],
+                        "id": 56,
+                        "name": "FunctionCall",
+                        "src": "669:71:0"
+                      }
+                    ],
+                    "id": 57,
+                    "name": "VariableDeclarationStatement",
+                    "src": "639:101:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_Property_$12_memory_ptr",
+                                  "typeString": "struct RealEstateMP.Property memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct RealEstateMP.Property storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 24,
+                                  "type": "struct RealEstateMP.Property storage ref[] storage ref",
+                                  "value": "properties"
+                                },
+                                "id": 58,
+                                "name": "Identifier",
+                                "src": "750:10:0"
+                              }
+                            ],
+                            "id": 60,
+                            "name": "MemberAccess",
+                            "src": "750:15:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 48,
+                              "type": "struct RealEstateMP.Property memory",
+                              "value": "newProperty"
+                            },
+                            "id": 61,
+                            "name": "Identifier",
+                            "src": "766:11:0"
+                          }
+                        ],
+                        "id": 62,
+                        "name": "FunctionCall",
+                        "src": "750:28:0"
+                      }
+                    ],
+                    "id": 63,
+                    "name": "ExpressionStatement",
+                    "src": "750:28:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 26,
+                              "type": "uint256",
+                              "value": "propertiesLength"
+                            },
+                            "id": 64,
+                            "name": "Identifier",
+                            "src": "788:16:0"
+                          }
+                        ],
+                        "id": 65,
+                        "name": "UnaryOperation",
+                        "src": "788:18:0"
+                      }
+                    ],
+                    "id": 66,
+                    "name": "ExpressionStatement",
+                    "src": "788:18:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "type": "uint256"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 36,
+                                  "type": "mapping(address => uint256)",
+                                  "value": "ownerPropertiesCount"
+                                },
+                                "id": 67,
+                                "name": "Identifier",
+                                "src": "816:20:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sender",
+                                  "referencedDeclaration": null,
+                                  "type": "address"
+                                },
+                                "children": [
                                   {
-                                    "typeIdentifier": "t_uint256",
-                                    "typeString": "uint256"
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 162,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 68,
+                                    "name": "Identifier",
+                                    "src": "837:3:0"
                                   }
                                 ],
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "member_name": "transfer",
-                                "referencedDeclaration": null,
-                                "type": "function (uint256)"
-                              },
-                              "children": [
+                                "id": 69,
+                                "name": "MemberAccess",
+                                "src": "837:10:0"
+                              }
+                            ],
+                            "id": 70,
+                            "name": "IndexAccess",
+                            "src": "816:32:0"
+                          }
+                        ],
+                        "id": 71,
+                        "name": "UnaryOperation",
+                        "src": "816:34:0"
+                      }
+                    ],
+                    "id": 72,
+                    "name": "ExpressionStatement",
+                    "src": "816:34:0"
+                  }
+                ],
+                "id": 73,
+                "name": "Block",
+                "src": "629:228:0"
+              }
+            ],
+            "id": 74,
+            "name": "FunctionDefinition",
+            "src": "521:336:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "createSale",
+              "payable": false,
+              "scope": 149,
+              "stateMutability": "nonpayable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_price",
+                      "scope": 104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 75,
+                        "name": "ElementaryTypeName",
+                        "src": "883:4:0"
+                      }
+                    ],
+                    "id": 76,
+                    "name": "VariableDeclaration",
+                    "src": "883:11:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_sellerId",
+                      "scope": 104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "address",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "address",
+                          "type": "address"
+                        },
+                        "id": 77,
+                        "name": "ElementaryTypeName",
+                        "src": "896:7:0"
+                      }
+                    ],
+                    "id": 78,
+                    "name": "VariableDeclaration",
+                    "src": "896:17:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_saleDate",
+                      "scope": 104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 79,
+                        "name": "ElementaryTypeName",
+                        "src": "915:4:0"
+                      }
+                    ],
+                    "id": 80,
+                    "name": "VariableDeclaration",
+                    "src": "915:14:0"
+                  },
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_propertyId",
+                      "scope": 104,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 81,
+                        "name": "ElementaryTypeName",
+                        "src": "931:4:0"
+                      }
+                    ],
+                    "id": 82,
+                    "name": "VariableDeclaration",
+                    "src": "931:16:0"
+                  }
+                ],
+                "id": 83,
+                "name": "ParameterList",
+                "src": "882:66:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 84,
+                "name": "ParameterList",
+                "src": "958:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "assignments": [
+                        86
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "newSale",
+                          "scope": 104,
+                          "stateVariable": false,
+                          "storageLocation": "memory",
+                          "type": "struct RealEstateMP.Sale memory",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "contractScope": null,
+                              "name": "Sale",
+                              "referencedDeclaration": 21,
+                              "type": "struct RealEstateMP.Sale storage pointer"
+                            },
+                            "id": 85,
+                            "name": "UserDefinedTypeName",
+                            "src": "968:4:0"
+                          }
+                        ],
+                        "id": 86,
+                        "name": "VariableDeclaration",
+                        "src": "968:19:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": true,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "struct RealEstateMP.Sale memory",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
                                 {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "isConstant": false,
-                                    "isLValue": true,
-                                    "isPure": false,
-                                    "lValueRequested": false,
-                                    "member_name": "sellerId",
-                                    "referencedDeclaration": 73,
-                                    "type": "address"
-                                  },
-                                  "children": [
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "isConstant": false,
-                                        "isLValue": true,
-                                        "isPure": false,
-                                        "lValueRequested": false,
-                                        "type": "struct RealEstateMP.Sale storage ref"
-                                      },
-                                      "children": [
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_address",
+                                  "typeString": "address"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                },
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 21,
+                              "type": "type(struct RealEstateMP.Sale storage pointer)",
+                              "value": "Sale"
+                            },
+                            "id": 87,
+                            "name": "Identifier",
+                            "src": "990:4:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 76,
+                              "type": "uint256",
+                              "value": "_price"
+                            },
+                            "id": 88,
+                            "name": "Identifier",
+                            "src": "995:6:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 78,
+                              "type": "address",
+                              "value": "_sellerId"
+                            },
+                            "id": 89,
+                            "name": "Identifier",
+                            "src": "1003:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 80,
+                              "type": "uint256",
+                              "value": "_saleDate"
+                            },
+                            "id": 90,
+                            "name": "Identifier",
+                            "src": "1014:9:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 82,
+                              "type": "uint256",
+                              "value": "_propertyId"
+                            },
+                            "id": 91,
+                            "name": "Identifier",
+                            "src": "1025:11:0"
+                          }
+                        ],
+                        "id": 92,
+                        "name": "FunctionCall",
+                        "src": "990:47:0"
+                      }
+                    ],
+                    "id": 93,
+                    "name": "VariableDeclarationStatement",
+                    "src": "968:69:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "uint256",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_struct$_Sale_$21_memory_ptr",
+                                  "typeString": "struct RealEstateMP.Sale memory"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "push",
+                              "referencedDeclaration": null,
+                              "type": "function (struct RealEstateMP.Sale storage ref) returns (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "struct RealEstateMP.Sale storage ref[] storage ref",
+                                  "value": "sales"
+                                },
+                                "id": 94,
+                                "name": "Identifier",
+                                "src": "1047:5:0"
+                              }
+                            ],
+                            "id": 96,
+                            "name": "MemberAccess",
+                            "src": "1047:10:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 86,
+                              "type": "struct RealEstateMP.Sale memory",
+                              "value": "newSale"
+                            },
+                            "id": 97,
+                            "name": "Identifier",
+                            "src": "1058:7:0"
+                          }
+                        ],
+                        "id": 98,
+                        "name": "FunctionCall",
+                        "src": "1047:19:0"
+                      }
+                    ],
+                    "id": 99,
+                    "name": "ExpressionStatement",
+                    "src": "1047:19:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "++",
+                          "prefix": false,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 32,
+                              "type": "uint256",
+                              "value": "salesLength"
+                            },
+                            "id": 100,
+                            "name": "Identifier",
+                            "src": "1076:11:0"
+                          }
+                        ],
+                        "id": 101,
+                        "name": "UnaryOperation",
+                        "src": "1076:13:0"
+                      }
+                    ],
+                    "id": 102,
+                    "name": "ExpressionStatement",
+                    "src": "1076:13:0"
+                  }
+                ],
+                "id": 103,
+                "name": "Block",
+                "src": "958:138:0"
+              }
+            ],
+            "id": 104,
+            "name": "FunctionDefinition",
+            "src": "863:233:0"
+          },
+          {
+            "attributes": {
+              "constant": false,
+              "documentation": null,
+              "implemented": true,
+              "isConstructor": false,
+              "modifiers": [
+                null
+              ],
+              "name": "buy",
+              "payable": true,
+              "scope": 149,
+              "stateMutability": "payable",
+              "superFunction": null,
+              "visibility": "external"
+            },
+            "children": [
+              {
+                "children": [
+                  {
+                    "attributes": {
+                      "constant": false,
+                      "name": "_saleId",
+                      "scope": 148,
+                      "stateVariable": false,
+                      "storageLocation": "default",
+                      "type": "uint256",
+                      "value": null,
+                      "visibility": "internal"
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "name": "uint",
+                          "type": "uint256"
+                        },
+                        "id": 105,
+                        "name": "ElementaryTypeName",
+                        "src": "1115:4:0"
+                      }
+                    ],
+                    "id": 106,
+                    "name": "VariableDeclaration",
+                    "src": "1115:12:0"
+                  }
+                ],
+                "id": 107,
+                "name": "ParameterList",
+                "src": "1114:14:0"
+              },
+              {
+                "attributes": {
+                  "parameters": [
+                    null
+                  ]
+                },
+                "children": [],
+                "id": 108,
+                "name": "ParameterList",
+                "src": "1146:0:0"
+              },
+              {
+                "children": [
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_bool",
+                                  "typeString": "bool"
+                                }
+                              ],
+                              "overloadedDeclarations": [
+                                null
+                              ],
+                              "referencedDeclaration": 165,
+                              "type": "function (bool) pure",
+                              "value": "require"
+                            },
+                            "id": 109,
+                            "name": "Identifier",
+                            "src": "1156:7:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "commonType": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                              },
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "operator": ">=",
+                              "type": "bool"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "isStructConstructorCall": false,
+                                  "lValueRequested": false,
+                                  "names": [
+                                    null
+                                  ],
+                                  "type": "uint256",
+                                  "type_conversion": true
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": [
                                         {
-                                          "attributes": {
-                                            "argumentTypes": null,
-                                            "overloadedDeclarations": [
-                                              null
-                                            ],
-                                            "referencedDeclaration": 84,
-                                            "type": "struct RealEstateMP.Sale storage ref[] storage ref",
-                                            "value": "sales"
-                                          },
-                                          "id": 173,
-                                          "name": "Identifier",
-                                          "src": "1152:5:1"
-                                        },
-                                        {
-                                          "attributes": {
-                                            "argumentTypes": null,
-                                            "overloadedDeclarations": [
-                                              null
-                                            ],
-                                            "referencedDeclaration": 158,
-                                            "type": "uint256",
-                                            "value": "_saleId"
-                                          },
-                                          "id": 174,
-                                          "name": "Identifier",
-                                          "src": "1158:7:1"
+                                          "typeIdentifier": "t_uint256",
+                                          "typeString": "uint256"
                                         }
                                       ],
-                                      "id": 175,
-                                      "name": "IndexAccess",
-                                      "src": "1152:14:1"
-                                    }
-                                  ],
-                                  "id": 176,
-                                  "name": "MemberAccess",
-                                  "src": "1152:23:1"
-                                }
-                              ],
-                              "id": 177,
-                              "name": "MemberAccess",
-                              "src": "1152:32:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "isStructConstructorCall": false,
-                                "lValueRequested": false,
-                                "names": [
-                                  null
-                                ],
-                                "type": "uint256",
-                                "type_conversion": true
-                              },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": [
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": true,
+                                      "lValueRequested": false,
+                                      "type": "type(uint256)",
+                                      "value": "uint"
+                                    },
+                                    "id": 110,
+                                    "name": "ElementaryTypeNameExpression",
+                                    "src": "1164:4:0"
+                                  },
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": false,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "member_name": "value",
+                                      "referencedDeclaration": null,
+                                      "type": "uint256"
+                                    },
+                                    "children": [
                                       {
-                                        "typeIdentifier": "t_uint256",
-                                        "typeString": "uint256"
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 162,
+                                          "type": "msg",
+                                          "value": "msg"
+                                        },
+                                        "id": 111,
+                                        "name": "Identifier",
+                                        "src": "1169:3:0"
                                       }
                                     ],
-                                    "isConstant": false,
-                                    "isLValue": false,
-                                    "isPure": true,
-                                    "lValueRequested": false,
-                                    "type": "type(uint256)",
-                                    "value": "uint"
-                                  },
-                                  "id": 178,
-                                  "name": "ElementaryTypeNameExpression",
-                                  "src": "1185:4:1"
+                                    "id": 112,
+                                    "name": "MemberAccess",
+                                    "src": "1169:9:0"
+                                  }
+                                ],
+                                "id": 113,
+                                "name": "FunctionCall",
+                                "src": "1164:15:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "price",
+                                  "referencedDeclaration": 14,
+                                  "type": "uint256"
                                 },
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "isConstant": false,
-                                    "isLValue": false,
-                                    "isPure": false,
-                                    "lValueRequested": false,
-                                    "member_name": "value",
-                                    "referencedDeclaration": null,
-                                    "type": "uint256"
-                                  },
-                                  "children": [
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "overloadedDeclarations": [
-                                          null
-                                        ],
-                                        "referencedDeclaration": 214,
-                                        "type": "msg",
-                                        "value": "msg"
-                                      },
-                                      "id": 179,
-                                      "name": "Identifier",
-                                      "src": "1190:3:1"
-                                    }
-                                  ],
-                                  "id": 180,
-                                  "name": "MemberAccess",
-                                  "src": "1190:9:1"
-                                }
-                              ],
-                              "id": 181,
-                              "name": "FunctionCall",
-                              "src": "1185:15:1"
-                            }
-                          ],
-                          "id": 182,
-                          "name": "FunctionCall",
-                          "src": "1152:49:1"
-                        }
-                      ],
-                      "id": 183,
-                      "name": "ExpressionStatement",
-                      "src": "1152:49:1"
-                    },
-                    {
-                      "attributes": {
-                        "assignments": [
-                          185
-                        ]
-                      },
-                      "children": [
-                        {
-                          "attributes": {
-                            "constant": false,
-                            "name": "propertySelled",
-                            "scope": 200,
-                            "stateVariable": false,
-                            "storageLocation": "default",
-                            "type": "uint256",
-                            "value": null,
-                            "visibility": "internal"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "name": "uint",
-                                "type": "uint256"
-                              },
-                              "id": 184,
-                              "name": "ElementaryTypeName",
-                              "src": "1211:4:1"
-                            }
-                          ],
-                          "id": 185,
-                          "name": "VariableDeclaration",
-                          "src": "1211:19:1"
-                        },
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": true,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "member_name": "propertyId",
-                            "referencedDeclaration": 77,
-                            "type": "uint256"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "isConstant": false,
-                                "isLValue": true,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "type": "struct RealEstateMP.Sale storage ref"
-                              },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 84,
-                                    "type": "struct RealEstateMP.Sale storage ref[] storage ref",
-                                    "value": "sales"
-                                  },
-                                  "id": 186,
-                                  "name": "Identifier",
-                                  "src": "1233:5:1"
-                                },
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 158,
-                                    "type": "uint256",
-                                    "value": "_saleId"
-                                  },
-                                  "id": 187,
-                                  "name": "Identifier",
-                                  "src": "1239:7:1"
-                                }
-                              ],
-                              "id": 188,
-                              "name": "IndexAccess",
-                              "src": "1233:14:1"
-                            }
-                          ],
-                          "id": 189,
-                          "name": "MemberAccess",
-                          "src": "1233:25:1"
-                        }
-                      ],
-                      "id": 190,
-                      "name": "VariableDeclarationStatement",
-                      "src": "1211:47:1"
-                    },
-                    {
-                      "children": [
-                        {
-                          "attributes": {
-                            "argumentTypes": null,
-                            "isConstant": false,
-                            "isLValue": false,
-                            "isPure": false,
-                            "lValueRequested": false,
-                            "operator": "=",
-                            "type": "address"
-                          },
-                          "children": [
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "isConstant": false,
-                                "isLValue": true,
-                                "isPure": false,
-                                "lValueRequested": true,
-                                "member_name": "owner",
-                                "referencedDeclaration": 68,
-                                "type": "address"
-                              },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "isConstant": false,
-                                    "isLValue": true,
-                                    "isPure": false,
-                                    "lValueRequested": false,
-                                    "type": "struct RealEstateMP.Property storage ref"
-                                  },
-                                  "children": [
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "overloadedDeclarations": [
-                                          null
-                                        ],
-                                        "referencedDeclaration": 81,
-                                        "type": "struct RealEstateMP.Property storage ref[] storage ref",
-                                        "value": "properties"
-                                      },
-                                      "id": 191,
-                                      "name": "Identifier",
-                                      "src": "1268:10:1"
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct RealEstateMP.Sale storage ref"
                                     },
-                                    {
-                                      "attributes": {
-                                        "argumentTypes": null,
-                                        "overloadedDeclarations": [
-                                          null
-                                        ],
-                                        "referencedDeclaration": 185,
-                                        "type": "uint256",
-                                        "value": "propertySelled"
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 29,
+                                          "type": "struct RealEstateMP.Sale storage ref[] storage ref",
+                                          "value": "sales"
+                                        },
+                                        "id": 114,
+                                        "name": "Identifier",
+                                        "src": "1183:5:0"
                                       },
-                                      "id": 192,
-                                      "name": "Identifier",
-                                      "src": "1279:14:1"
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 106,
+                                          "type": "uint256",
+                                          "value": "_saleId"
+                                        },
+                                        "id": 115,
+                                        "name": "Identifier",
+                                        "src": "1189:7:0"
+                                      }
+                                    ],
+                                    "id": 116,
+                                    "name": "IndexAccess",
+                                    "src": "1183:14:0"
+                                  }
+                                ],
+                                "id": 117,
+                                "name": "MemberAccess",
+                                "src": "1183:20:0"
+                              }
+                            ],
+                            "id": 118,
+                            "name": "BinaryOperation",
+                            "src": "1164:39:0"
+                          }
+                        ],
+                        "id": 119,
+                        "name": "FunctionCall",
+                        "src": "1156:48:0"
+                      }
+                    ],
+                    "id": 120,
+                    "name": "ExpressionStatement",
+                    "src": "1156:48:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "isStructConstructorCall": false,
+                          "lValueRequested": false,
+                          "names": [
+                            null
+                          ],
+                          "type": "tuple()",
+                          "type_conversion": false
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": [
+                                {
+                                  "typeIdentifier": "t_uint256",
+                                  "typeString": "uint256"
+                                }
+                              ],
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "transfer",
+                              "referencedDeclaration": null,
+                              "type": "function (uint256)"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "sellerId",
+                                  "referencedDeclaration": 16,
+                                  "type": "address"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "isConstant": false,
+                                      "isLValue": true,
+                                      "isPure": false,
+                                      "lValueRequested": false,
+                                      "type": "struct RealEstateMP.Sale storage ref"
+                                    },
+                                    "children": [
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 29,
+                                          "type": "struct RealEstateMP.Sale storage ref[] storage ref",
+                                          "value": "sales"
+                                        },
+                                        "id": 121,
+                                        "name": "Identifier",
+                                        "src": "1214:5:0"
+                                      },
+                                      {
+                                        "attributes": {
+                                          "argumentTypes": null,
+                                          "overloadedDeclarations": [
+                                            null
+                                          ],
+                                          "referencedDeclaration": 106,
+                                          "type": "uint256",
+                                          "value": "_saleId"
+                                        },
+                                        "id": 122,
+                                        "name": "Identifier",
+                                        "src": "1220:7:0"
+                                      }
+                                    ],
+                                    "id": 123,
+                                    "name": "IndexAccess",
+                                    "src": "1214:14:0"
+                                  }
+                                ],
+                                "id": 124,
+                                "name": "MemberAccess",
+                                "src": "1214:23:0"
+                              }
+                            ],
+                            "id": 125,
+                            "name": "MemberAccess",
+                            "src": "1214:32:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "isStructConstructorCall": false,
+                              "lValueRequested": false,
+                              "names": [
+                                null
+                              ],
+                              "type": "uint256",
+                              "type_conversion": true
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": [
+                                    {
+                                      "typeIdentifier": "t_uint256",
+                                      "typeString": "uint256"
                                     }
                                   ],
-                                  "id": 193,
-                                  "name": "IndexAccess",
-                                  "src": "1268:26:1"
-                                }
-                              ],
-                              "id": 194,
-                              "name": "MemberAccess",
-                              "src": "1268:32:1"
-                            },
-                            {
-                              "attributes": {
-                                "argumentTypes": null,
-                                "isConstant": false,
-                                "isLValue": false,
-                                "isPure": false,
-                                "lValueRequested": false,
-                                "member_name": "sender",
-                                "referencedDeclaration": null,
-                                "type": "address"
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": true,
+                                  "lValueRequested": false,
+                                  "type": "type(uint256)",
+                                  "value": "uint"
+                                },
+                                "id": 126,
+                                "name": "ElementaryTypeNameExpression",
+                                "src": "1247:4:0"
                               },
-                              "children": [
-                                {
-                                  "attributes": {
-                                    "argumentTypes": null,
-                                    "overloadedDeclarations": [
-                                      null
-                                    ],
-                                    "referencedDeclaration": 214,
-                                    "type": "msg",
-                                    "value": "msg"
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": false,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "member_name": "value",
+                                  "referencedDeclaration": null,
+                                  "type": "uint256"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 162,
+                                      "type": "msg",
+                                      "value": "msg"
+                                    },
+                                    "id": 127,
+                                    "name": "Identifier",
+                                    "src": "1252:3:0"
+                                  }
+                                ],
+                                "id": 128,
+                                "name": "MemberAccess",
+                                "src": "1252:9:0"
+                              }
+                            ],
+                            "id": 129,
+                            "name": "FunctionCall",
+                            "src": "1247:15:0"
+                          }
+                        ],
+                        "id": 130,
+                        "name": "FunctionCall",
+                        "src": "1214:49:0"
+                      }
+                    ],
+                    "id": 131,
+                    "name": "ExpressionStatement",
+                    "src": "1214:49:0"
+                  },
+                  {
+                    "attributes": {
+                      "assignments": [
+                        133
+                      ]
+                    },
+                    "children": [
+                      {
+                        "attributes": {
+                          "constant": false,
+                          "name": "propertySelled",
+                          "scope": 148,
+                          "stateVariable": false,
+                          "storageLocation": "default",
+                          "type": "uint256",
+                          "value": null,
+                          "visibility": "internal"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "name": "uint",
+                              "type": "uint256"
+                            },
+                            "id": 132,
+                            "name": "ElementaryTypeName",
+                            "src": "1273:4:0"
+                          }
+                        ],
+                        "id": 133,
+                        "name": "VariableDeclaration",
+                        "src": "1273:19:0"
+                      },
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": true,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "member_name": "propertyId",
+                          "referencedDeclaration": 20,
+                          "type": "uint256"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "type": "struct RealEstateMP.Sale storage ref"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 29,
+                                  "type": "struct RealEstateMP.Sale storage ref[] storage ref",
+                                  "value": "sales"
+                                },
+                                "id": 134,
+                                "name": "Identifier",
+                                "src": "1295:5:0"
+                              },
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 106,
+                                  "type": "uint256",
+                                  "value": "_saleId"
+                                },
+                                "id": 135,
+                                "name": "Identifier",
+                                "src": "1301:7:0"
+                              }
+                            ],
+                            "id": 136,
+                            "name": "IndexAccess",
+                            "src": "1295:14:0"
+                          }
+                        ],
+                        "id": 137,
+                        "name": "MemberAccess",
+                        "src": "1295:25:0"
+                      }
+                    ],
+                    "id": 138,
+                    "name": "VariableDeclarationStatement",
+                    "src": "1273:47:0"
+                  },
+                  {
+                    "children": [
+                      {
+                        "attributes": {
+                          "argumentTypes": null,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": false,
+                          "lValueRequested": false,
+                          "operator": "=",
+                          "type": "address"
+                        },
+                        "children": [
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": true,
+                              "isPure": false,
+                              "lValueRequested": true,
+                              "member_name": "owner",
+                              "referencedDeclaration": 11,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "isConstant": false,
+                                  "isLValue": true,
+                                  "isPure": false,
+                                  "lValueRequested": false,
+                                  "type": "struct RealEstateMP.Property storage ref"
+                                },
+                                "children": [
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 24,
+                                      "type": "struct RealEstateMP.Property storage ref[] storage ref",
+                                      "value": "properties"
+                                    },
+                                    "id": 139,
+                                    "name": "Identifier",
+                                    "src": "1330:10:0"
                                   },
-                                  "id": 195,
-                                  "name": "Identifier",
-                                  "src": "1303:3:1"
-                                }
-                              ],
-                              "id": 196,
-                              "name": "MemberAccess",
-                              "src": "1303:10:1"
-                            }
-                          ],
-                          "id": 197,
-                          "name": "Assignment",
-                          "src": "1268:45:1"
-                        }
-                      ],
-                      "id": 198,
-                      "name": "ExpressionStatement",
-                      "src": "1268:45:1"
-                    }
-                  ],
-                  "id": 199,
-                  "name": "Block",
-                  "src": "1084:236:1"
-                }
-              ],
-              "id": 200,
-              "name": "FunctionDefinition",
-              "src": "1040:280:1"
-            }
-          ],
-          "id": 201,
-          "name": "ContractDefinition",
-          "src": "26:1296:1"
-        }
-      ],
-      "id": 202,
-      "name": "SourceUnit",
-      "src": "0:1322:1"
-    },
-    "compiler": {
-      "name": "solc",
-      "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
-    },
-    "networks": {},
-    "schemaVersion": "3.4.7",
-    "updatedAt": "2022-04-15T10:19:19.926Z",
-    "devdoc": {
-      "methods": {}
-    },
-    "userdoc": {
-      "methods": {}
+                                  {
+                                    "attributes": {
+                                      "argumentTypes": null,
+                                      "overloadedDeclarations": [
+                                        null
+                                      ],
+                                      "referencedDeclaration": 133,
+                                      "type": "uint256",
+                                      "value": "propertySelled"
+                                    },
+                                    "id": 140,
+                                    "name": "Identifier",
+                                    "src": "1341:14:0"
+                                  }
+                                ],
+                                "id": 141,
+                                "name": "IndexAccess",
+                                "src": "1330:26:0"
+                              }
+                            ],
+                            "id": 142,
+                            "name": "MemberAccess",
+                            "src": "1330:32:0"
+                          },
+                          {
+                            "attributes": {
+                              "argumentTypes": null,
+                              "isConstant": false,
+                              "isLValue": false,
+                              "isPure": false,
+                              "lValueRequested": false,
+                              "member_name": "sender",
+                              "referencedDeclaration": null,
+                              "type": "address"
+                            },
+                            "children": [
+                              {
+                                "attributes": {
+                                  "argumentTypes": null,
+                                  "overloadedDeclarations": [
+                                    null
+                                  ],
+                                  "referencedDeclaration": 162,
+                                  "type": "msg",
+                                  "value": "msg"
+                                },
+                                "id": 143,
+                                "name": "Identifier",
+                                "src": "1365:3:0"
+                              }
+                            ],
+                            "id": 144,
+                            "name": "MemberAccess",
+                            "src": "1365:10:0"
+                          }
+                        ],
+                        "id": 145,
+                        "name": "Assignment",
+                        "src": "1330:45:0"
+                      }
+                    ],
+                    "id": 146,
+                    "name": "ExpressionStatement",
+                    "src": "1330:45:0"
+                  }
+                ],
+                "id": 147,
+                "name": "Block",
+                "src": "1146:236:0"
+              }
+            ],
+            "id": 148,
+            "name": "FunctionDefinition",
+            "src": "1102:280:0"
+          }
+        ],
+        "id": 149,
+        "name": "ContractDefinition",
+        "src": "26:1358:0"
+      }
+    ],
+    "id": 150,
+    "name": "SourceUnit",
+    "src": "0:1410:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {
+    "4": {
+      "events": {},
+      "links": {},
+      "address": "0x4559dF36c003f50254e261321c2a5a55846aC09a",
+      "transactionHash": "0x68c28929fb5f03fadf8c249953d8872415a03458ad8a45c696c46b58435e3db1"
     }
-};
+  },
+  "schemaVersion": "3.4.7",
+  "updatedAt": "2022-04-15T12:42:25.675Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
