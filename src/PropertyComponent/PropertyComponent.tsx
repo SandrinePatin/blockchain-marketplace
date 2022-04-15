@@ -1,10 +1,10 @@
 import React from 'react';
 import './PropertyComponent.css';
 import Property from "../models/Property";
-import PropertyDetailsPopup from "./PropertyDetailsPopup";
+import PropertyDetails from "./PropertyDetails";
 
 
-class PropertyComponent extends React.Component<{data: any}, { [key: string]: any}>{
+class PropertyComponent extends React.Component<{data: any, myaddr: string}, { [key: string]: any}>{
     state = {showPopup: false};
     constructor(props: any) {
         super(props);
@@ -18,22 +18,30 @@ class PropertyComponent extends React.Component<{data: any}, { [key: string]: an
         this.setState({showPopup: false});
     }
 
+    openClosePopupHandler = () => {
+        if(this.state.showPopup == true){
+            this.closePopupHandler();
+        } else {
+            this.openPopupHandler();
+        }
+    }
+
     render(){
         let data = this.props.data
         let popup = null;
         if(this.state.showPopup) {
-            popup = (<PropertyDetailsPopup message={data.propertyId} closeMe={this.closePopupHandler}/>);
+            popup = (<PropertyDetails property={data.propertyId} myaddr={this.props.myaddr}/>);
 
         }
         return (
-            <div className="card col-md-3 m-1" >
+            <div className="card col-md-2 mt-1 ms-sm-2" >
                 <div className="card-body">
                     <h5 className="card-title">{data.propertyId.address}</h5>
                     <p>Price : {data.price}</p>
                     <p>Date : {data.saleDate}</p>
+                    {popup}
                     <div>
-                        <button className="btn btn-outline-info" onClick={this.openPopupHandler}>Voir les détails </button>
-                        {popup}
+                        <button className="btn btn-outline-info" onClick={this.openClosePopupHandler}>Voir les détails </button>
                     </div>
                 </div>
             </div>

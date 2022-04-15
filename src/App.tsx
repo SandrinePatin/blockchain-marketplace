@@ -6,8 +6,9 @@ import MyProperties from "./MyProperties/MyProperties";
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 
 function App() {
+    const me = "myaddresswithalotofletters"
     const navigation = {
-        brand: { name: "NavbarScroller", to: "/" },
+        brand: { name: "ImmoMarket", to: "/" },
         links: [
         { name: "Liste des annonces", to: "/" },
         { name: "Mes propriétés", to: "/myProperties" },
@@ -19,10 +20,11 @@ function App() {
                 <MarketNavbar brand={brand} links={links}/>
                 <BrowserRouter>
                     <Routes>
-                        <Route  path="/" element={<SalesList />} />
-                        <Route path="/myProperties" element={<MyProperties />} />
+                        <Route  path="/" element={<SalesList myaddr={me}/>} />
+                        <Route path="/myProperties" element={<MyProperties myaddr={me}/>} />
                     </Routes>
                 </BrowserRouter>
+
             </div>
     );
 }
