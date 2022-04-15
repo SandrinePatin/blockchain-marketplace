@@ -13,10 +13,10 @@ class PropertyDetails extends React.Component<any, any> {
         }
         return (
             <div>
-                <p>Adresse : {property.address}</p>
-                <p>Taille : {property.size}</p>
-                <p>Description : {property.description}</p>
-                <p>Nombre de pièces : {property.rooms}</p>
+                <div>Adresse : {property.address}</div>
+                <div>Taille : {property.size}</div>
+                <div>Description : {property.description}</div>
+                <div>Nombre de pièces : {property.rooms}</div>
                 {buttonSell}
             </div>
         );

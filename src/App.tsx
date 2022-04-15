@@ -20,7 +20,7 @@ function App() {
                 <MarketNavbar brand={brand} links={links}/>
                 <BrowserRouter>
                     <Routes>
-                        <Route  path="/" element={<SalesList myaddr={me}/>} />
+                        <Route path="/" element={<SalesList myaddr={me}/>} />
                         <Route path="/myProperties" element={<MyProperties myaddr={me}/>} />
                     </Routes>
                 </BrowserRouter>
