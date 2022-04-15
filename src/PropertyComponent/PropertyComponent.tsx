@@ -2,10 +2,11 @@ import React from 'react';
 import './PropertyComponent.css';
 import Property from "../models/Property";
 import PropertyDetailsPopup from "./PropertyDetailsPopup";
-
+import { connectEth } from '../ABI/ContractController';
 
 class PropertyComponent extends React.Component<{data: any}, { [key: string]: any}>{
     state = {showPopup: false};
+    contract: any = null;
     constructor(props: any) {
         super(props);
     }
@@ -18,13 +19,26 @@ class PropertyComponent extends React.Component<{data: any}, { [key: string]: an
         this.setState({showPopup: false});
     }
 
+    buyMe = () => {
+        if (this.contract !== null) {
+            console.log('BOUGHT');
+        }
+    }
+
     render(){
         let data = this.props.data
         let popup = null;
         if(this.state.showPopup) {
-            popup = (<PropertyDetailsPopup message={data.propertyId} closeMe={this.closePopupHandler}/>);
-
+            popup = (<PropertyDetailsPopup message={data.propertyId} closeMe={this.closePopupHandler} buyMe={this.buyMe}/>);
         }
+        connectEth()
+        .then(result => {
+            this.contract = result.contract;
+        })
+        .catch(err => {
+            console.error(err.message);
+        });
+
         return (
             <div className="card col-md-3 m-1" >
                 <div className="card-body">

@@ -8,7 +8,10 @@ class PropertyDetailsPopup extends React.Component<any, any> {
                 <p>Taille : {this.props.message.size}</p>
                 <p>Description : {this.props.message.description}</p>
                 <p>Nombre de pièces : {this.props.message.rooms}</p>
-                <button className="btn btn-outline-danger" onClick={this.props.closeMe}>Close Popup</button>
+                <div className="btn-group">
+                    <button className="btn btn-success" onClick={this.props.buyMe}>Buy me !</button>
+                    <button className="btn btn-outline-danger" onClick={this.props.closeMe}>Close Popup</button>
+                </div>
             </div>
         );
     }
